@@ -1,0 +1,12 @@
+[environments.target]
+url = "jdbc:postgresql://gp_target:5432/target_dev"
+user = "admin"
+password = "password"
+locations = [
+    "filesystem:/flyway/sql/target/schemas/travel_raw",
+    "filesystem:/flyway/sql/target/schemas/sandbox"
+]
+
+[flyway]
+environment = "target"
+group = true

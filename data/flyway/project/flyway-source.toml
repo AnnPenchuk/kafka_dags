@@ -1,0 +1,12 @@
+[environments.source]
+url = "jdbc:postgresql://pg_source:5432/source_dev"
+user = "admin"
+password = "password"
+locations = [
+    "filesystem:/flyway/sql/schemas/travel_agency",
+    "filesystem:/flyway/sql/schemas/sandbox"
+]
+
+[flyway]
+environment = "source"
+group = true
