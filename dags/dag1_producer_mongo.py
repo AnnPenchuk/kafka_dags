@@ -12,12 +12,13 @@ from confluent_kafka.schema_registry.avro import AvroSerializer
 from confluent_kafka.admin import AdminClient
 from confluent_kafka.cimpl import NewTopic
 from pymongo import MongoClient
+from settings import settings
 
 
 
 # Функция для подключения к MongoDB и извлечения данных
 def fetch_data_from_mongo():
-    MONGO_HOST = "mongodb+srv://smartintegratordev:YV1ZVX0XbmgGfaq0@cluster0.9kxy2.mongodb.net/"
+    MONGO_HOST = settings.mongo_url
     client = MongoClient(
         host=MONGO_HOST,
     )

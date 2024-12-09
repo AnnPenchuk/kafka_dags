@@ -1,21 +1,10 @@
-import io
-import json
-import os
-
 import boto3
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable
 from datetime import datetime, time
-
-from airflow.providers.apache.kafka.hooks.produce import KafkaProducerHook
 from confluent_kafka import Producer
-#import avro.schema
-#import avro.io
-from confluent_kafka.admin import AdminClient
-from confluent_kafka.schema_registry import SchemaRegistryClient
-from confluent_kafka.schema_registry.avro import AvroSerializer
-from confluent_kafka.serialization import SerializationContext, MessageField
+from settings import settings
 
 
 # Подключение к S3
@@ -49,7 +38,7 @@ def check_s3_connection():
 
 # Подключение к Kafka Producer
 def connect_kafka_producer():
-    KAFKA_URL = '172.30.181.198:9092'
+    KAFKA_URL = settings.kafka
     kafka_config = Variable.get(KAFKA_URL, deserialize_json=True)
 
     return Producer({'bootstrap.servers': kafka_config['bootstrap_servers']})
@@ -57,12 +46,10 @@ def connect_kafka_producer():
 
 def send_to_kafka(data):
     """Отправка данных в Kafka (как бинарные данные)"""
-    TOPIC_NAME = 'data.travelagency.avro.receipt1'
+    TOPIC_NAME = settings.topic2
 
     kafka_config = {
-        'bootstrap.servers': '172.30.181.198:9092',
-        'sasl.mechanism': 'PLAIN',
-        'security.protocol': 'PLAINTEXT',
+        'bootstrap.servers': settings.kafka,
     }
 
     producer = Producer(kafka_config)
@@ -74,12 +61,12 @@ def read_from_minio_to_kafka():
     client = connect_s3()
     try:
         response = client.list_buckets()
-        buckets = [bucket['Name'] for bucket in response.get('Buckets', [])]
-        print(f"Подключение успешно. Найдено {len(buckets)} бакетов: {buckets}")
+        #buckets = [bucket['Name'] for bucket in response.get('Buckets', [])]
+        #print(f"Подключение успешно. Найдено {len(buckets)} бакетов: {buckets}")
     except Exception as e:
         print(f"Ошибка подключения: {e}")
         raise
-    bucket_name = 'reciept-bucket'
+    bucket_name = settings.bucket_name
     response = client.list_objects_v2(Bucket=bucket_name)
     if 'Contents' in response:
         print(f"Содержимое бакета {bucket_name}:")
@@ -89,7 +76,6 @@ def read_from_minio_to_kafka():
             print(f"Обрабатывается файл: {file_key}")
             file_response = client.get_object(Bucket=bucket_name, Key=file_key)
             file_data = file_response['Body'].read()
-
             # Отправка данных в Kafka
             send_to_kafka(file_data)
     else:
@@ -98,7 +84,7 @@ def read_from_minio_to_kafka():
 
 
 
-# Определение DAG
+
 with DAG(
     dag_id="s3_to_kafka_avro",
     default_args={"owner": "airflow", "retries": 1},

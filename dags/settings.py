@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     kafka: str
     group_id: str
     topic1: str
+    topic2: str
+    db: str
 
 
 settings = Settings()
