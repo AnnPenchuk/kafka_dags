@@ -1,0 +1,458 @@
+[2024-12-07T22:43:39.125+0000] {processor.py:186} INFO - Started process (PID=2938) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:43:39.126+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:43:39.128+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:43:39.127+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:43:39.276+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:43:39.417+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:43:39.416+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:43:39.444+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:43:39.443+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:43:39.472+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.352 seconds
+[2024-12-07T22:44:10.274+0000] {processor.py:186} INFO - Started process (PID=2951) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:44:10.276+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:44:10.278+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:44:10.277+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:44:10.443+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:44:10.473+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:44:10.472+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:44:10.503+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:44:10.503+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:44:10.529+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.265 seconds
+[2024-12-07T22:44:40.916+0000] {processor.py:186} INFO - Started process (PID=2964) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:44:40.917+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:44:40.919+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:44:40.918+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:44:41.049+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:44:41.061+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:44:41.061+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:44:41.089+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:44:41.089+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:44:41.112+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.204 seconds
+[2024-12-07T22:45:11.398+0000] {processor.py:186} INFO - Started process (PID=2978) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:45:11.400+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:45:11.401+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:45:11.401+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:45:11.531+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:45:11.665+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:45:11.665+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:45:11.691+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:45:11.691+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:45:11.714+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.322 seconds
+[2024-12-07T22:45:41.860+0000] {processor.py:186} INFO - Started process (PID=2992) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:45:41.861+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:45:41.863+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:45:41.863+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:45:42.027+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:45:42.061+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:45:42.060+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:45:42.100+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:45:42.100+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:45:42.131+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.279 seconds
+[2024-12-07T22:46:12.704+0000] {processor.py:186} INFO - Started process (PID=3005) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:46:12.705+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:46:12.708+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:46:12.707+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:46:12.900+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:46:12.914+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:46:12.913+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:46:12.946+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:46:12.946+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:46:12.972+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.276 seconds
+[2024-12-07T22:46:43.317+0000] {processor.py:186} INFO - Started process (PID=3018) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:46:43.319+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:46:43.321+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:46:43.320+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:46:43.510+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:46:43.667+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:46:43.666+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:46:43.692+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:46:43.692+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:46:43.716+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.407 seconds
+[2024-12-07T22:47:14.511+0000] {processor.py:186} INFO - Started process (PID=3031) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:47:14.512+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:47:14.513+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:47:14.513+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:47:14.647+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:47:14.677+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:47:14.676+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:47:14.712+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:47:14.712+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:47:14.743+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.239 seconds
+[2024-12-07T22:47:44.957+0000] {processor.py:186} INFO - Started process (PID=3044) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:47:44.959+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:47:44.961+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:47:44.961+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:47:45.124+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:47:45.140+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:47:45.139+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:47:45.183+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:47:45.183+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:47:45.216+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.270 seconds
+[2024-12-07T22:48:15.453+0000] {processor.py:186} INFO - Started process (PID=3057) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:48:15.455+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:48:15.458+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:48:15.458+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:48:15.624+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:48:15.798+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:48:15.798+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:48:15.831+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:48:15.830+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:48:15.861+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.416 seconds
+[2024-12-07T22:48:45.958+0000] {processor.py:186} INFO - Started process (PID=3070) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:48:45.959+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:48:45.961+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:48:45.961+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:48:46.128+0000] {processor.py:925} INFO - DAG(s) 'dag1_producer_mongo' retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:48:46.159+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:48:46.159+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-07T22:48:46.192+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:48:46.191+0000] {dag.py:4180} INFO - Setting next_dagrun for dag1_producer_mongo to 2024-12-07 00:00:00+00:00, run_after=2024-12-08 00:00:00+00:00
+[2024-12-07T22:48:46.218+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.268 seconds
+[2024-12-07T22:49:15.118+0000] {processor.py:186} INFO - Started process (PID=3083) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:49:15.120+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:49:15.122+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:49:15.121+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:49:15.265+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:49:15.259+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:49:15.267+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:49:15.288+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.178 seconds
+[2024-12-07T22:49:45.512+0000] {processor.py:186} INFO - Started process (PID=3096) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:49:45.514+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:49:45.516+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:49:45.516+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:49:45.666+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:49:45.659+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:49:45.669+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:49:45.692+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.188 seconds
+[2024-12-07T22:50:16.082+0000] {processor.py:186} INFO - Started process (PID=3109) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:50:16.084+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:50:16.086+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:50:16.086+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:50:16.254+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:50:16.248+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:50:16.257+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:50:16.287+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.218 seconds
+[2024-12-07T22:50:46.467+0000] {processor.py:186} INFO - Started process (PID=3122) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:50:46.468+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:50:46.470+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:50:46.469+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:50:46.606+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:50:46.600+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:50:46.608+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:50:46.631+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.172 seconds
+[2024-12-07T22:51:16.979+0000] {processor.py:186} INFO - Started process (PID=3135) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:51:16.980+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:51:16.981+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:51:16.981+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:51:17.118+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:51:17.112+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:51:17.120+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:51:17.142+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.169 seconds
+[2024-12-07T22:51:47.483+0000] {processor.py:186} INFO - Started process (PID=3148) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:51:47.484+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:51:47.486+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:51:47.486+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:51:47.639+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:51:47.632+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:51:47.642+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:51:47.672+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.197 seconds
+[2024-12-07T22:52:13.695+0000] {processor.py:186} INFO - Started process (PID=3159) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:52:13.697+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:52:13.699+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:52:13.699+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:52:13.879+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:52:13.873+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:52:13.882+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:52:13.910+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.226 seconds
+[2024-12-07T22:52:44.586+0000] {processor.py:186} INFO - Started process (PID=3172) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:52:44.587+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:52:44.589+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:52:44.589+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:52:44.740+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:52:44.733+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:52:44.742+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:52:44.768+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.191 seconds
+[2024-12-07T22:53:14.872+0000] {processor.py:186} INFO - Started process (PID=3185) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:53:14.873+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:53:14.876+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:53:14.875+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:53:15.075+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:53:15.068+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:53:15.078+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:53:15.105+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.243 seconds
+[2024-12-07T22:53:45.484+0000] {processor.py:186} INFO - Started process (PID=3199) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:53:45.486+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:53:45.488+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:53:45.487+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:53:45.635+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:53:45.629+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:53:45.637+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:53:45.662+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.186 seconds
+[2024-12-07T22:54:08.701+0000] {processor.py:186} INFO - Started process (PID=3212) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:54:08.702+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:54:08.704+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:54:08.703+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:54:08.860+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:54:08.854+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:54:08.862+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:54:08.884+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.191 seconds
+[2024-12-07T22:54:39.626+0000] {processor.py:186} INFO - Started process (PID=3225) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:54:39.627+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:54:39.630+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:54:39.629+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:54:39.801+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:54:39.793+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:54:39.804+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:54:39.832+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.215 seconds
+[2024-12-07T22:55:09.967+0000] {processor.py:186} INFO - Started process (PID=3239) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:55:09.968+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:55:09.970+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:55:09.970+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:55:10.091+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:55:10.084+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:55:10.093+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:55:10.114+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.154 seconds
+[2024-12-07T22:55:40.388+0000] {processor.py:186} INFO - Started process (PID=3252) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:55:40.389+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:55:40.391+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:55:40.390+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:55:40.502+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:55:40.496+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:55:40.504+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:55:40.524+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.144 seconds
+[2024-12-07T22:56:11.038+0000] {processor.py:186} INFO - Started process (PID=3265) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:56:11.040+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:56:11.041+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:56:11.041+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:56:11.156+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:56:11.150+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:56:11.158+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:56:11.179+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.149 seconds
+[2024-12-07T22:56:41.312+0000] {processor.py:186} INFO - Started process (PID=3278) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:56:41.313+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:56:41.315+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:56:41.314+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:56:41.426+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:56:41.419+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:56:41.428+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:56:41.448+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.142 seconds
+[2024-12-07T22:57:11.623+0000] {processor.py:186} INFO - Started process (PID=3291) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:57:11.624+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:57:11.626+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:57:11.626+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:57:11.766+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:57:11.759+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:57:11.769+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:57:11.793+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.180 seconds
+[2024-12-07T22:57:42.240+0000] {processor.py:186} INFO - Started process (PID=3304) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:57:42.241+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:57:42.243+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:57:42.243+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:57:42.353+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:57:42.347+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:57:42.355+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:57:42.376+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.145 seconds
+[2024-12-07T22:58:12.640+0000] {processor.py:186} INFO - Started process (PID=3317) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:58:12.641+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:58:12.642+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:58:12.642+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:58:12.751+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:58:12.745+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:58:12.753+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:58:12.774+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.141 seconds
+[2024-12-07T22:58:42.916+0000] {processor.py:186} INFO - Started process (PID=3330) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:58:42.918+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:58:42.920+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:58:42.919+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:58:43.059+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:58:43.054+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:58:43.061+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:58:43.084+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.177 seconds
+[2024-12-07T22:59:13.349+0000] {processor.py:186} INFO - Started process (PID=3343) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:59:13.350+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:59:13.352+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:59:13.352+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:59:13.459+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:59:13.453+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:59:13.462+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:59:13.481+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.141 seconds
+[2024-12-07T22:59:43.652+0000] {processor.py:186} INFO - Started process (PID=3356) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:59:43.653+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T22:59:43.654+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:59:43.654+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:59:43.766+0000] {logging_mixin.py:190} INFO - [2024-12-07T22:59:43.761+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T22:59:43.768+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T22:59:43.788+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.142 seconds
+[2024-12-07T23:00:14.246+0000] {processor.py:186} INFO - Started process (PID=3369) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:00:14.247+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T23:00:14.249+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:00:14.249+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:00:14.357+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:00:14.351+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T23:00:14.359+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:00:14.377+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.137 seconds
+[2024-12-07T23:00:44.660+0000] {processor.py:186} INFO - Started process (PID=3382) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:00:44.661+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T23:00:44.662+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:00:44.662+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:00:44.779+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:00:44.772+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T23:00:44.781+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:00:44.801+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.148 seconds
+[2024-12-07T23:01:15.486+0000] {processor.py:186} INFO - Started process (PID=3396) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:15.488+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T23:01:15.490+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:01:15.489+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:15.629+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:01:15.624+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T23:01:15.631+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:15.651+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.172 seconds
+[2024-12-07T23:01:45.719+0000] {processor.py:186} INFO - Started process (PID=3409) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:45.721+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T23:01:45.723+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:01:45.722+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:45.839+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:01:45.835+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 8, in <module>
+    import avro.schema
+ModuleNotFoundError: No module named 'avro'
+[2024-12-07T23:01:45.841+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:45.859+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.147 seconds
+[2024-12-07T23:01:56.228+0000] {processor.py:186} INFO - Started process (PID=3410) to work on /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:56.231+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/dag3_s3_kafka.py for tasks to queue
+[2024-12-07T23:01:56.234+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:01:56.234+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:56.271+0000] {logging_mixin.py:190} INFO - [2024-12-07T23:01:56.269+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/dag3_s3_kafka.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag3_s3_kafka.py", line 56
+    return {
+           ^
+SyntaxError: '{' was never closed
+[2024-12-07T23:01:56.273+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/dag3_s3_kafka.py
+[2024-12-07T23:01:56.318+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/dag3_s3_kafka.py took 0.110 seconds

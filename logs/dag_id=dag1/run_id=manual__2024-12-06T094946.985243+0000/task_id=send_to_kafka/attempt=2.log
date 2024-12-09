@@ -1,0 +1,111 @@
+[2024-12-06T09:56:19.282+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-06T09:56:19.300+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag1.send_to_kafka manual__2024-12-06T09:49:46.985243+00:00 [queued]>
+[2024-12-06T09:56:19.311+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag1.send_to_kafka manual__2024-12-06T09:49:46.985243+00:00 [queued]>
+[2024-12-06T09:56:19.313+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-06T09:56:19.328+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): send_to_kafka> on 2024-12-06 09:49:46.985243+00:00
+[2024-12-06T09:56:19.334+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=770) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-06T09:56:19.335+0000] {standard_task_runner.py:72} INFO - Started process 771 to run task
+[2024-12-06T09:56:19.336+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag1', 'send_to_kafka', 'manual__2024-12-06T09:49:46.985243+00:00', '--job-id', '426', '--raw', '--subdir', 'DAGS_FOLDER/dag1_producer_mongo.py', '--cfg-path', '/tmp/tmp_wpt5bm5']
+[2024-12-06T09:56:19.338+0000] {standard_task_runner.py:105} INFO - Job 426: Subtask send_to_kafka
+[2024-12-06T09:56:19.382+0000] {task_command.py:467} INFO - Running <TaskInstance: dag1.send_to_kafka manual__2024-12-06T09:49:46.985243+00:00 [running]> on host bc436253e42c
+[2024-12-06T09:56:19.473+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag1' AIRFLOW_CTX_TASK_ID='send_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-06T09:49:46.985243+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-06T09:49:46.985243+00:00'
+[2024-12-06T09:56:19.474+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-06T09:57:30.436+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag1_producer_mongo.py", line 138, in producer
+    position += 1
+                ^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/confluent_kafka/admin/__init__.py", line 638, in list_topics
+    return super(AdminClient, self).list_topics(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cimpl.KafkaException: KafkaError{code=_TIMED_OUT,val=-185,str="Failed to get metadata: Local: Timed out"}
+[2024-12-06T09:57:30.465+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=dag1, task_id=send_to_kafka, run_id=manual__2024-12-06T09:49:46.985243+00:00, execution_date=20241206T094946, start_date=20241206T095619, end_date=20241206T095730
+[2024-12-06T09:57:30.485+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-06T09:57:30.486+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 426 for task send_to_kafka (KafkaError{code=_TIMED_OUT,val=-185,str="Failed to get metadata: Local: Timed out"}; 771)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag1_producer_mongo.py", line 138, in producer
+    position += 1
+                ^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/confluent_kafka/admin/__init__.py", line 638, in list_topics
+    return super(AdminClient, self).list_topics(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+cimpl.KafkaException: KafkaError{code=_TIMED_OUT,val=-185,str="Failed to get metadata: Local: Timed out"}
+[2024-12-06T09:57:30.510+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-06T09:57:30.524+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-06T09:57:30.525+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,22 @@
+[2024-12-05T12:55:45.424+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-05T12:55:45.445+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: producer_dag.send_to_kafka manual__2024-12-05T12:55:39.957409+00:00 [queued]>
+[2024-12-05T12:55:45.456+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: producer_dag.send_to_kafka manual__2024-12-05T12:55:39.957409+00:00 [queued]>
+[2024-12-05T12:55:45.458+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-05T12:55:45.474+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): send_to_kafka> on 2024-12-05 12:55:39.957409+00:00
+[2024-12-05T12:55:45.481+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3947) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-05T12:55:45.483+0000] {standard_task_runner.py:72} INFO - Started process 3949 to run task
+[2024-12-05T12:55:45.483+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'producer_dag', 'send_to_kafka', 'manual__2024-12-05T12:55:39.957409+00:00', '--job-id', '356', '--raw', '--subdir', 'DAGS_FOLDER/dag_producer_mongo.py', '--cfg-path', '/tmp/tmpb5fgz9of']
+[2024-12-05T12:55:45.486+0000] {standard_task_runner.py:105} INFO - Job 356: Subtask send_to_kafka
+[2024-12-05T12:55:45.539+0000] {task_command.py:467} INFO - Running <TaskInstance: producer_dag.send_to_kafka manual__2024-12-05T12:55:39.957409+00:00 [running]> on host bc436253e42c
+[2024-12-05T12:55:45.636+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='producer_dag' AIRFLOW_CTX_TASK_ID='send_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-05T12:55:39.957409+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-05T12:55:39.957409+00:00'
+[2024-12-05T12:55:45.638+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-05T12:55:50.864+0000] {logging_mixin.py:190} INFO - Извлечено 2 документов из MongoDB
+[2024-12-05T12:55:50.867+0000] {logging_mixin.py:190} INFO - Обработанные документы: [{'_id': '6707fa42840c437097f7b593', 'travel': 3, 'payer': 1, 'amount': 26092, 'code_departure': 'SIN', 'code_arrival': 'ICN', 'number_of_passengers': 4, 'passengers': [{'passenger': 'Zoe Barnaby', 'birth_date': '1993-09-24'}, {'name': 'Ružica Ivančević', 'birth_date': '1995-09-02'}, {'name': 'Timm Raabe', 'birth_date': '1976-11-19'}, {'name': 'Greta Oorschot', 'birth_date': '1993-08-19'}], 'created': '2024-10-10T16:01:06.102000'}, {'_id': '6707fa469a6e091126308054', 'travel': 1, 'payer': 4, 'amount': 9835, 'code_departure': 'DUB', 'code_arrival': 'BKK', 'number_of_passengers': 1, 'passengers': [{'passenger': 'Carla Jiménez', 'birth_date': '1982-03-11'}], 'created': '2024-10-10T16:01:10.152000'}]
+[2024-12-05T12:55:56.953+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-05T12:55:57.121+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-05T12:55:57.122+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=producer_dag, task_id=send_to_kafka, run_id=manual__2024-12-05T12:55:39.957409+00:00, execution_date=20241205T125539, start_date=20241205T125545, end_date=20241205T125557
+[2024-12-05T12:55:57.168+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-05T12:55:57.185+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-05T12:55:57.188+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

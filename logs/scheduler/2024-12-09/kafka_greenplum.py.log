@@ -1,0 +1,406 @@
+[2024-12-09T10:48:01.341+0000] {processor.py:186} INFO - Started process (PID=4886) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:48:01.342+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:48:01.344+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:48:01.343+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:48:01.507+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:48:01.648+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:48:01.648+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:48:01.675+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:48:01.675+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:48:01.703+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.368 seconds
+[2024-12-09T10:48:32.104+0000] {processor.py:186} INFO - Started process (PID=4900) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:48:32.105+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:48:32.107+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:48:32.106+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:48:32.254+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:48:32.282+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:48:32.281+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:48:32.315+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:48:32.315+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:48:32.340+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.243 seconds
+[2024-12-09T10:49:02.646+0000] {processor.py:186} INFO - Started process (PID=4915) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:49:02.648+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:49:02.650+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:49:02.649+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:49:02.893+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:49:02.910+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:49:02.908+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:49:02.950+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:49:02.949+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:49:02.979+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.346 seconds
+[2024-12-09T10:49:33.126+0000] {processor.py:186} INFO - Started process (PID=4929) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:49:33.128+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:49:33.130+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:49:33.129+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:49:33.386+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:49:33.610+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:49:33.609+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:49:33.654+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:49:33.654+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:49:33.688+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.574 seconds
+[2024-12-09T10:50:03.077+0000] {processor.py:186} INFO - Started process (PID=4943) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:50:03.080+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:50:03.087+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:50:03.085+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:50:03.485+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:50:03.572+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:50:03.561+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:50:03.689+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:50:03.688+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:50:03.739+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.689 seconds
+[2024-12-09T10:50:33.917+0000] {processor.py:186} INFO - Started process (PID=4957) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:50:33.919+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:50:33.921+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:50:33.921+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:50:34.086+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:50:34.102+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:50:34.100+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:50:34.138+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:50:34.138+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:50:34.163+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.254 seconds
+[2024-12-09T10:51:04.705+0000] {processor.py:186} INFO - Started process (PID=4971) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:51:04.707+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:51:04.708+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:51:04.708+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:51:04.852+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:51:04.996+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:51:04.995+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:51:05.025+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:51:05.025+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:51:05.049+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.350 seconds
+[2024-12-09T10:51:35.288+0000] {processor.py:186} INFO - Started process (PID=4985) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:51:35.291+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:51:35.295+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:51:35.294+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:51:35.614+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:51:35.670+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:51:35.668+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:51:35.732+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:51:35.732+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:51:35.782+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.516 seconds
+[2024-12-09T10:52:05.901+0000] {processor.py:186} INFO - Started process (PID=4999) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:52:05.902+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:52:05.904+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:52:05.904+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:52:06.084+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:52:06.098+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:52:06.097+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:52:06.138+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:52:06.138+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:52:06.164+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.269 seconds
+[2024-12-09T10:52:36.404+0000] {processor.py:186} INFO - Started process (PID=5014) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:52:36.405+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:52:36.407+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:52:36.406+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:52:36.601+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:52:36.758+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:52:36.758+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:52:36.790+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:52:36.790+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:52:36.818+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.421 seconds
+[2024-12-09T10:53:07.048+0000] {processor.py:186} INFO - Started process (PID=5029) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:53:07.050+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:53:07.052+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:53:07.051+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:53:07.220+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:53:07.250+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:53:07.249+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:53:07.279+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:53:07.279+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:53:07.304+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.265 seconds
+[2024-12-09T10:53:37.735+0000] {processor.py:186} INFO - Started process (PID=5043) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:53:37.736+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:53:37.738+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:53:37.738+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:53:37.892+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:53:37.907+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:53:37.906+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:53:37.944+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:53:37.944+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:53:37.971+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.243 seconds
+[2024-12-09T10:54:08.494+0000] {processor.py:186} INFO - Started process (PID=5063) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:54:08.496+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:54:08.497+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:54:08.497+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:54:08.682+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:54:08.850+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:54:08.849+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:54:08.876+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:54:08.876+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:54:08.901+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.413 seconds
+[2024-12-09T10:54:38.993+0000] {processor.py:186} INFO - Started process (PID=5077) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:54:38.995+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:54:38.997+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:54:38.997+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:54:39.194+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:54:39.232+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:54:39.231+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:54:39.270+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:54:39.270+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:54:39.299+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.314 seconds
+[2024-12-09T10:55:09.712+0000] {processor.py:186} INFO - Started process (PID=5092) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:55:09.713+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:55:09.715+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:55:09.715+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:55:09.934+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:55:09.953+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:55:09.951+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:55:10.009+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:55:10.009+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:55:10.047+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.346 seconds
+[2024-12-09T10:55:40.484+0000] {processor.py:186} INFO - Started process (PID=5106) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:55:40.487+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:55:40.490+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:55:40.489+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:55:40.724+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:55:40.943+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:55:40.942+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:55:40.985+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:55:40.985+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:55:41.017+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.547 seconds
+[2024-12-09T10:56:11.253+0000] {processor.py:186} INFO - Started process (PID=5120) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:56:11.254+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:56:11.257+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:56:11.256+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:56:11.764+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:56:11.816+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:56:11.814+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:56:11.875+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:56:11.875+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:56:11.920+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.676 seconds
+[2024-12-09T10:56:42.103+0000] {processor.py:186} INFO - Started process (PID=5134) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:56:42.104+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:56:42.106+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:56:42.105+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:56:42.312+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:56:42.330+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:56:42.328+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:56:42.377+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:56:42.376+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:56:42.410+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.317 seconds
+[2024-12-09T10:57:12.827+0000] {processor.py:186} INFO - Started process (PID=5148) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:57:12.828+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:57:12.831+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:57:12.830+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:57:13.089+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:57:13.315+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:57:13.314+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:57:13.354+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:57:13.354+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:57:13.383+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.566 seconds
+[2024-12-09T10:57:43.495+0000] {processor.py:186} INFO - Started process (PID=5162) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:57:43.496+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:57:43.498+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:57:43.498+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:57:43.698+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:57:43.730+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:57:43.730+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:57:43.774+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:57:43.773+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:57:43.808+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.321 seconds
+[2024-12-09T10:58:14.176+0000] {processor.py:186} INFO - Started process (PID=5176) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:58:14.178+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:58:14.180+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:58:14.180+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:58:14.453+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:58:14.473+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:58:14.471+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:58:14.534+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:58:14.533+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:58:14.567+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.403 seconds
+[2024-12-09T10:58:45.269+0000] {processor.py:186} INFO - Started process (PID=5190) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:58:45.270+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:58:45.272+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:58:45.271+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:58:45.469+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:58:45.651+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:58:45.650+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:58:45.690+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:58:45.690+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:58:45.723+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.461 seconds
+[2024-12-09T10:59:16.214+0000] {processor.py:186} INFO - Started process (PID=5204) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:59:16.215+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:59:16.217+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:59:16.217+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:59:16.398+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:59:16.429+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:59:16.429+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:59:16.461+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:59:16.460+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:59:16.488+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.281 seconds
+[2024-12-09T10:59:47.260+0000] {processor.py:186} INFO - Started process (PID=5219) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:59:47.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T10:59:47.263+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:59:47.262+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:59:47.416+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T10:59:47.428+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:59:47.427+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T10:59:47.469+0000] {logging_mixin.py:190} INFO - [2024-12-09T10:59:47.469+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T10:59:47.496+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.242 seconds
+[2024-12-09T11:00:18.049+0000] {processor.py:186} INFO - Started process (PID=5239) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:00:18.050+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:00:18.052+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:00:18.051+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:00:18.213+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:00:18.361+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:00:18.361+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:00:18.393+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:00:18.393+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:00:18.418+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.375 seconds
+[2024-12-09T11:00:48.762+0000] {processor.py:186} INFO - Started process (PID=5253) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:00:48.763+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:00:48.765+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:00:48.764+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:00:48.933+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:00:48.962+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:00:48.961+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:00:48.997+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:00:48.997+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:00:49.026+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.270 seconds
+[2024-12-09T11:01:19.138+0000] {processor.py:186} INFO - Started process (PID=5267) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:01:19.139+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:01:19.141+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:01:19.140+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:01:19.341+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:01:19.357+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:01:19.356+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:01:19.391+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:01:19.391+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:01:19.413+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.283 seconds
+[2024-12-09T11:01:50.035+0000] {processor.py:186} INFO - Started process (PID=5281) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:01:50.036+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:01:50.039+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:01:50.038+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:01:50.263+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:01:50.500+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:01:50.499+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:01:50.548+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:01:50.548+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:01:50.586+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.563 seconds
+[2024-12-09T11:02:21.095+0000] {processor.py:186} INFO - Started process (PID=5296) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:02:21.097+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:02:21.100+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:02:21.099+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:02:21.403+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:02:21.451+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:02:21.450+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:02:21.500+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:02:21.499+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:02:21.533+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.450 seconds
+[2024-12-09T11:02:51.900+0000] {processor.py:186} INFO - Started process (PID=5310) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:02:51.903+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:02:51.907+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:02:51.906+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:02:52.196+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:02:52.217+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:02:52.214+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:02:52.275+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:02:52.275+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:02:52.331+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.445 seconds
+[2024-12-09T11:03:22.608+0000] {processor.py:186} INFO - Started process (PID=5324) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:03:22.610+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:03:22.612+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:03:22.612+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:03:22.836+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:03:23.021+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:03:23.020+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:03:23.053+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:03:23.052+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:03:23.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.482 seconds
+[2024-12-09T11:03:53.788+0000] {processor.py:186} INFO - Started process (PID=5338) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:03:53.790+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:03:53.793+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:03:53.792+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:03:54.075+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:03:54.139+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:03:54.138+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:03:54.209+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:03:54.209+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:03:54.257+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.480 seconds
+[2024-12-09T11:04:24.547+0000] {processor.py:186} INFO - Started process (PID=5351) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:04:24.549+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:04:24.552+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:04:24.551+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:04:24.848+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:04:24.875+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:04:24.872+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:04:24.938+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:04:24.938+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:04:24.980+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.443 seconds
+[2024-12-09T11:04:55.815+0000] {processor.py:186} INFO - Started process (PID=5365) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:04:55.817+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:04:55.818+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:04:55.818+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:04:56.049+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:04:56.309+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:04:56.309+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:04:56.350+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:04:56.350+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:04:56.391+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.583 seconds
+[2024-12-09T11:05:26.537+0000] {processor.py:186} INFO - Started process (PID=5378) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:05:26.539+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:05:26.541+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:05:26.541+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:05:26.751+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:05:26.783+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:05:26.782+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:05:26.818+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:05:26.818+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:05:26.847+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.318 seconds
+[2024-12-09T11:05:57.148+0000] {processor.py:186} INFO - Started process (PID=5392) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:05:57.149+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:05:57.151+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:05:57.150+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:05:57.343+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:05:57.359+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:05:57.357+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:05:57.393+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:05:57.393+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:05:57.419+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.278 seconds
+[2024-12-09T11:06:27.505+0000] {processor.py:186} INFO - Started process (PID=5412) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:06:27.507+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:06:27.509+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:06:27.509+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:06:27.717+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:06:27.884+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:06:27.883+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:06:27.923+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:06:27.922+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:06:27.953+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.457 seconds
+[2024-12-09T11:06:58.050+0000] {processor.py:186} INFO - Started process (PID=5426) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:06:58.051+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:06:58.052+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:06:58.052+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:06:58.239+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:06:58.271+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:06:58.270+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:06:58.306+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:06:58.305+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:06:58.333+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.289 seconds
+[2024-12-09T11:07:28.639+0000] {processor.py:186} INFO - Started process (PID=5440) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:07:28.640+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:07:28.642+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:07:28.642+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:07:28.817+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:07:28.833+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:07:28.831+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:07:28.875+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:07:28.875+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:07:28.908+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.276 seconds
+[2024-12-09T11:07:59.348+0000] {processor.py:186} INFO - Started process (PID=5455) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:07:59.350+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:07:59.352+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:07:59.352+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:07:59.614+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:07:59.880+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:07:59.879+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:07:59.932+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:07:59.931+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:07:59.969+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.636 seconds
+[2024-12-09T11:08:30.052+0000] {processor.py:186} INFO - Started process (PID=5469) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:08:30.053+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:08:30.055+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:08:30.055+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:08:30.302+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:08:30.347+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:08:30.346+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:08:30.399+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:08:30.399+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:08:30.433+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.391 seconds
+[2024-12-09T11:09:00.884+0000] {processor.py:186} INFO - Started process (PID=5483) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:00.885+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:09:00.887+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:00.887+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:01.332+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:01.386+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:01.383+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:09:01.487+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:01.486+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:09:01.570+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.696 seconds
+[2024-12-09T11:09:32.186+0000] {processor.py:186} INFO - Started process (PID=5497) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:32.188+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:09:32.191+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:32.190+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:32.457+0000] {processor.py:925} INFO - DAG(s) 'read_Kafka' retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:32.648+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:32.647+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-09T11:09:32.683+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:32.682+0000] {dag.py:4180} INFO - Setting next_dagrun for read_Kafka to 2024-12-08 00:00:00+00:00, run_after=2024-12-09 00:00:00+00:00
+[2024-12-09T11:09:32.711+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.537 seconds
+[2024-12-09T11:09:52.304+0000] {processor.py:186} INFO - Started process (PID=5510) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.306+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:09:52.310+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:52.309+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.383+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:52.361+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:09:52.398+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.434+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.142 seconds
+[2024-12-09T11:09:52.508+0000] {processor.py:186} INFO - Started process (PID=5512) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.510+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:09:52.513+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:52.512+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.561+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:52.539+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:09:52.575+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.608+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.113 seconds
+[2024-12-09T11:09:52.718+0000] {processor.py:186} INFO - Started process (PID=5513) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.721+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:09:52.724+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:52.723+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.819+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:09:52.790+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:09:52.846+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:09:52.899+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.203 seconds
+[2024-12-09T11:10:23.281+0000] {processor.py:186} INFO - Started process (PID=5525) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:10:23.283+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:10:23.285+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:10:23.285+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:10:23.333+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:10:23.316+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:10:23.348+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:10:23.387+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.118 seconds
+[2024-12-09T11:10:54.125+0000] {processor.py:186} INFO - Started process (PID=5539) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:10:54.127+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:10:54.130+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:10:54.129+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:10:54.193+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:10:54.168+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:10:54.213+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:10:54.258+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.144 seconds
+[2024-12-09T11:11:24.546+0000] {processor.py:186} INFO - Started process (PID=5553) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:11:24.547+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:11:24.550+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:11:24.549+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:11:24.596+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:11:24.578+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:11:24.609+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:11:24.640+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.104 seconds
+[2024-12-09T11:11:55.289+0000] {processor.py:186} INFO - Started process (PID=5568) to work on /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:11:55.291+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_greenplum.py for tasks to queue
+[2024-12-09T11:11:55.293+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:11:55.293+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:11:55.338+0000] {logging_mixin.py:190} INFO - [2024-12-09T11:11:55.318+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_greenplum.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_greenplum.py", line 23, in <module>
+    create_external_table = PostgresOperator(
+                            ^^^^^^^^^^^^^^^^
+NameError: name 'PostgresOperator' is not defined
+[2024-12-09T11:11:55.351+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_greenplum.py
+[2024-12-09T11:11:55.382+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_greenplum.py took 0.102 seconds

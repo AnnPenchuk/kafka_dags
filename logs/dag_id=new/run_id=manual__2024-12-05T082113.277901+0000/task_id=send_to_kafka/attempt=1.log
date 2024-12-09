@@ -1,0 +1,20 @@
+[2024-12-05T08:21:14.430+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-05T08:21:14.448+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: new.send_to_kafka manual__2024-12-05T08:21:13.277901+00:00 [queued]>
+[2024-12-05T08:21:14.459+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: new.send_to_kafka manual__2024-12-05T08:21:13.277901+00:00 [queued]>
+[2024-12-05T08:21:14.460+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-05T08:21:14.477+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): send_to_kafka> on 2024-12-05 08:21:13.277901+00:00
+[2024-12-05T08:21:14.484+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1260) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-05T08:21:14.486+0000] {standard_task_runner.py:72} INFO - Started process 1261 to run task
+[2024-12-05T08:21:14.487+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'new', 'send_to_kafka', 'manual__2024-12-05T08:21:13.277901+00:00', '--job-id', '341', '--raw', '--subdir', 'DAGS_FOLDER/new2.py', '--cfg-path', '/tmp/tmpbd4ndu3a']
+[2024-12-05T08:21:14.490+0000] {standard_task_runner.py:105} INFO - Job 341: Subtask send_to_kafka
+[2024-12-05T08:21:14.545+0000] {task_command.py:467} INFO - Running <TaskInstance: new.send_to_kafka manual__2024-12-05T08:21:13.277901+00:00 [running]> on host bc436253e42c
+[2024-12-05T08:21:14.629+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='new' AIRFLOW_CTX_TASK_ID='send_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-05T08:21:13.277901+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-05T08:21:13.277901+00:00'
+[2024-12-05T08:21:14.630+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-05T08:21:20.191+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-05T08:21:20.212+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-05T08:21:20.214+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=new, task_id=send_to_kafka, run_id=manual__2024-12-05T08:21:13.277901+00:00, execution_date=20241205T082113, start_date=20241205T082114, end_date=20241205T082120
+[2024-12-05T08:21:20.247+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-05T08:21:20.269+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-05T08:21:20.271+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

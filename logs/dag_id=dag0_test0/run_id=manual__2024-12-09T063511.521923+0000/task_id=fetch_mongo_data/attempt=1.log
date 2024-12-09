@@ -1,0 +1,21 @@
+[2024-12-09T06:35:13.636+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-09T06:35:13.680+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag0_test0.fetch_mongo_data manual__2024-12-09T06:35:11.521923+00:00 [queued]>
+[2024-12-09T06:35:13.704+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag0_test0.fetch_mongo_data manual__2024-12-09T06:35:11.521923+00:00 [queued]>
+[2024-12-09T06:35:13.706+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-09T06:35:13.736+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_mongo_data> on 2024-12-09 06:35:11.521923+00:00
+[2024-12-09T06:35:13.745+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=268) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-09T06:35:13.748+0000] {standard_task_runner.py:72} INFO - Started process 269 to run task
+[2024-12-09T06:35:13.749+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag0_test0', 'fetch_mongo_data', 'manual__2024-12-09T06:35:11.521923+00:00', '--job-id', '677', '--raw', '--subdir', 'DAGS_FOLDER/dag0.py', '--cfg-path', '/tmp/tmpa4ci93id']
+[2024-12-09T06:35:13.751+0000] {standard_task_runner.py:105} INFO - Job 677: Subtask fetch_mongo_data
+[2024-12-09T06:35:13.855+0000] {task_command.py:467} INFO - Running <TaskInstance: dag0_test0.fetch_mongo_data manual__2024-12-09T06:35:11.521923+00:00 [running]> on host d7d86e3077c3
+[2024-12-09T06:35:14.019+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag0_test0' AIRFLOW_CTX_TASK_ID='fetch_mongo_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-09T06:35:11.521923+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-09T06:35:11.521923+00:00'
+[2024-12-09T06:35:14.021+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-09T06:35:14.055+0000] {logging_mixin.py:190} INFO - hell
+[2024-12-09T06:35:14.057+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-09T06:35:14.074+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-09T06:35:14.075+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=dag0_test0, task_id=fetch_mongo_data, run_id=manual__2024-12-09T06:35:11.521923+00:00, execution_date=20241209T063511, start_date=20241209T063513, end_date=20241209T063514
+[2024-12-09T06:35:14.126+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-09T06:35:14.152+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-09T06:35:14.156+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

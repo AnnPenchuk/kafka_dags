@@ -1,0 +1,22 @@
+[2024-12-04T19:46:12.182+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-04T19:46:12.260+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test_pr.test1 scheduled__2024-12-03T00:00:00+00:00 [queued]>
+[2024-12-04T19:46:12.302+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test_pr.test1 scheduled__2024-12-03T00:00:00+00:00 [queued]>
+[2024-12-04T19:46:12.305+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-04T19:46:12.371+0000] {taskinstance.py:2889} INFO - Executing <Task(ProduceToTopicOperator): test1> on 2024-12-03 00:00:00+00:00
+[2024-12-04T19:46:12.387+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1386) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-04T19:46:12.393+0000] {standard_task_runner.py:72} INFO - Started process 1389 to run task
+[2024-12-04T19:46:12.395+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'test_pr', 'test1', 'scheduled__2024-12-03T00:00:00+00:00', '--job-id', '283', '--raw', '--subdir', 'DAGS_FOLDER/test_dags.py', '--cfg-path', '/tmp/tmpx0plakid']
+[2024-12-04T19:46:12.400+0000] {standard_task_runner.py:105} INFO - Job 283: Subtask test1
+[2024-12-04T19:46:12.601+0000] {task_command.py:467} INFO - Running <TaskInstance: test_pr.test1 scheduled__2024-12-03T00:00:00+00:00 [running]> on host bc436253e42c
+[2024-12-04T19:46:13.009+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test_pr' AIRFLOW_CTX_TASK_ID='test1' AIRFLOW_CTX_EXECUTION_DATE='2024-12-03T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-03T00:00:00+00:00'
+[2024-12-04T19:46:13.019+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-04T19:46:13.075+0000] {base.py:84} INFO - Retrieving connection 'kafka_connection'
+[2024-12-04T19:46:13.082+0000] {produce.py:41} INFO - Producer <cimpl.Producer object at 0x7fe565b09120>
+[2024-12-04T19:46:13.659+0000] {produce.py:35} INFO - Produced record to topic data.travelagency.avro.receipt, partition [2] @ offset 2
+[2024-12-04T19:46:13.680+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-04T19:46:13.681+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=test_pr, task_id=test1, run_id=scheduled__2024-12-03T00:00:00+00:00, execution_date=20241203T000000, start_date=20241204T194612, end_date=20241204T194613
+[2024-12-04T19:46:13.741+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-04T19:46:13.772+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-04T19:46:13.775+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

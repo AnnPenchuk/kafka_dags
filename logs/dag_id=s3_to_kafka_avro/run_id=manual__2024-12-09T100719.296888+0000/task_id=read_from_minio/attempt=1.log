@@ -1,0 +1,307 @@
+[2024-12-09T10:07:24.147+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-09T10:07:24.192+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: s3_to_kafka_avro.read_from_minio manual__2024-12-09T10:07:19.296888+00:00 [queued]>
+[2024-12-09T10:07:24.212+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: s3_to_kafka_avro.read_from_minio manual__2024-12-09T10:07:19.296888+00:00 [queued]>
+[2024-12-09T10:07:24.213+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-09T10:07:24.238+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): read_from_minio> on 2024-12-09 10:07:19.296888+00:00
+[2024-12-09T10:07:24.247+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2076) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-09T10:07:24.250+0000] {standard_task_runner.py:72} INFO - Started process 2077 to run task
+[2024-12-09T10:07:24.250+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 's3_to_kafka_avro', 'read_from_minio', 'manual__2024-12-09T10:07:19.296888+00:00', '--job-id', '52', '--raw', '--subdir', 'DAGS_FOLDER/dag3_s3_kafka.py', '--cfg-path', '/tmp/tmpqecye8ea']
+[2024-12-09T10:07:24.255+0000] {standard_task_runner.py:105} INFO - Job 52: Subtask read_from_minio
+[2024-12-09T10:07:24.347+0000] {task_command.py:467} INFO - Running <TaskInstance: s3_to_kafka_avro.read_from_minio manual__2024-12-09T10:07:19.296888+00:00 [running]> on host c23cf8b5bd6f
+[2024-12-09T10:07:24.519+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='s3_to_kafka_avro' AIRFLOW_CTX_TASK_ID='read_from_minio' AIRFLOW_CTX_EXECUTION_DATE='2024-12-09T10:07:19.296888+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-09T10:07:19.296888+00:00'
+[2024-12-09T10:07:24.522+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-09T10:07:24.996+0000] {logging_mixin.py:190} INFO - Подключение успешно. Найдено 7 бакетов: ['levs-test', 'mybucket', 'reciept-bucket', 'spark', 'test-bucket', 'travel', 'users-add']
+[2024-12-09T10:07:25.161+0000] {logging_mixin.py:190} INFO - Содержимое бакета reciept-bucket:
+[2024-12-09T10:07:25.163+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:25.164+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222514.avro
+[2024-12-09T10:07:27.210+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.213+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.216+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222515.avro
+[2024-12-09T10:07:27.276+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.281+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.283+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222516.avro
+[2024-12-09T10:07:27.327+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.329+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.330+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222517.avro
+[2024-12-09T10:07:27.376+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.378+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.380+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222518.avro
+[2024-12-09T10:07:27.428+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.430+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.432+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222519.avro
+[2024-12-09T10:07:27.475+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.477+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.478+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222520.avro
+[2024-12-09T10:07:27.520+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.522+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.523+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222521.avro
+[2024-12-09T10:07:27.573+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.575+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.577+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222522.avro
+[2024-12-09T10:07:27.647+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.650+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.652+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222523.avro
+[2024-12-09T10:07:27.700+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.702+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.703+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222524.avro
+[2024-12-09T10:07:27.742+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.744+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.745+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222525.avro
+[2024-12-09T10:07:27.788+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.789+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.791+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222526.avro
+[2024-12-09T10:07:27.834+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.835+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.836+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222527.avro
+[2024-12-09T10:07:27.874+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.875+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.876+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222528.avro
+[2024-12-09T10:07:27.911+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.913+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.915+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222529.avro
+[2024-12-09T10:07:27.955+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.957+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:27.958+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222530.avro
+[2024-12-09T10:07:27.998+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:27.999+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.001+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222531.avro
+[2024-12-09T10:07:28.040+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.041+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.043+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222532.avro
+[2024-12-09T10:07:28.079+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.082+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.083+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222533.avro
+[2024-12-09T10:07:28.122+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.123+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.125+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222534.avro
+[2024-12-09T10:07:28.160+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.162+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.163+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222535.avro
+[2024-12-09T10:07:28.199+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.201+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.202+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222537.avro
+[2024-12-09T10:07:28.237+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.238+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.240+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222538.avro
+[2024-12-09T10:07:28.276+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.278+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.279+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222539.avro
+[2024-12-09T10:07:28.319+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.321+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.323+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222540.avro
+[2024-12-09T10:07:28.365+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.367+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.368+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222541.avro
+[2024-12-09T10:07:28.407+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.409+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.410+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222542.avro
+[2024-12-09T10:07:28.453+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.456+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.459+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222543.avro
+[2024-12-09T10:07:28.502+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.504+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.505+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222544.avro
+[2024-12-09T10:07:28.550+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.552+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.554+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222545.avro
+[2024-12-09T10:07:28.590+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.591+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.593+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222546.avro
+[2024-12-09T10:07:28.631+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.633+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.634+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222547.avro
+[2024-12-09T10:07:28.672+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.673+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.674+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222548.avro
+[2024-12-09T10:07:28.707+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.709+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.710+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222549.avro
+[2024-12-09T10:07:28.744+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.746+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.747+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222550.avro
+[2024-12-09T10:07:28.786+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.788+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.789+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222551.avro
+[2024-12-09T10:07:28.823+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.825+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.826+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222552.avro
+[2024-12-09T10:07:28.863+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.865+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.866+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222553.avro
+[2024-12-09T10:07:28.900+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.902+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.903+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222554.avro
+[2024-12-09T10:07:28.941+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.943+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.945+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222555.avro
+[2024-12-09T10:07:28.986+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:28.988+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:28.989+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222556.avro
+[2024-12-09T10:07:29.026+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.028+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.030+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222557.avro
+[2024-12-09T10:07:29.066+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.068+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.069+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222558.avro
+[2024-12-09T10:07:29.101+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.103+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.104+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222559.avro
+[2024-12-09T10:07:29.142+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.144+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.145+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222600.avro
+[2024-12-09T10:07:29.183+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.186+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.188+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222601.avro
+[2024-12-09T10:07:29.235+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.237+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.238+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222602.avro
+[2024-12-09T10:07:29.271+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.273+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.274+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222603.avro
+[2024-12-09T10:07:29.311+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.313+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.314+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222604.avro
+[2024-12-09T10:07:29.348+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.349+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.350+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222605.avro
+[2024-12-09T10:07:29.387+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.389+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.390+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222606.avro
+[2024-12-09T10:07:29.427+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.429+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.430+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222607.avro
+[2024-12-09T10:07:29.472+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.474+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.475+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222608.avro
+[2024-12-09T10:07:29.515+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.517+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.518+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222609.avro
+[2024-12-09T10:07:29.556+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.558+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.559+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222610.avro
+[2024-12-09T10:07:29.600+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.601+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.602+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222611.avro
+[2024-12-09T10:07:29.637+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.639+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.640+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222612.avro
+[2024-12-09T10:07:29.677+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.678+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.680+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222613.avro
+[2024-12-09T10:07:29.717+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.719+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.720+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222615.avro
+[2024-12-09T10:07:29.786+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.790+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.791+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222616.avro
+[2024-12-09T10:07:29.853+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.856+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.858+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222617.avro
+[2024-12-09T10:07:29.919+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.921+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.923+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222618.avro
+[2024-12-09T10:07:29.970+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:29.972+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:29.974+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222619.avro
+[2024-12-09T10:07:30.025+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.027+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.028+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222620.avro
+[2024-12-09T10:07:30.067+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.069+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.070+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222621.avro
+[2024-12-09T10:07:30.116+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.120+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.122+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222622.avro
+[2024-12-09T10:07:30.162+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.164+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.164+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241207222623.avro
+[2024-12-09T10:07:30.198+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.199+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.200+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090113.avro
+[2024-12-09T10:07:30.236+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.238+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.240+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090114.avro
+[2024-12-09T10:07:30.288+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.291+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.293+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090115.avro
+[2024-12-09T10:07:30.338+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.339+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.341+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090117.avro
+[2024-12-09T10:07:30.379+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.382+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.384+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090118.avro
+[2024-12-09T10:07:30.430+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.431+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.432+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090119.avro
+[2024-12-09T10:07:30.481+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.483+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.485+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090121.avro
+[2024-12-09T10:07:30.532+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.534+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.535+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090122.avro
+[2024-12-09T10:07:30.568+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.570+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.571+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090123.avro
+[2024-12-09T10:07:30.609+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.610+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.611+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090124.avro
+[2024-12-09T10:07:30.647+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.648+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.649+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090125.avro
+[2024-12-09T10:07:30.695+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.700+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.703+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090126.avro
+[2024-12-09T10:07:30.740+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.741+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.742+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090127.avro
+[2024-12-09T10:07:30.778+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.780+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.781+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090128.avro
+[2024-12-09T10:07:30.836+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.839+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.840+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090129.avro
+[2024-12-09T10:07:30.889+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.890+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.892+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090130.avro
+[2024-12-09T10:07:30.945+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:30.949+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:30.952+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090131.avro
+[2024-12-09T10:07:31.010+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.011+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.012+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090132.avro
+[2024-12-09T10:07:31.056+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.060+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.062+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090133.avro
+[2024-12-09T10:07:31.101+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.103+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.104+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090134.avro
+[2024-12-09T10:07:31.148+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.151+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.152+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090136.avro
+[2024-12-09T10:07:31.190+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.191+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.192+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090137.avro
+[2024-12-09T10:07:31.227+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.228+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.229+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090139.avro
+[2024-12-09T10:07:31.267+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.269+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.270+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090140.avro
+[2024-12-09T10:07:31.314+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.317+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.319+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090141.avro
+[2024-12-09T10:07:31.369+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.371+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.372+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090142.avro
+[2024-12-09T10:07:31.409+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.411+0000] {logging_mixin.py:190} INFO - <class 'dict'>
+[2024-12-09T10:07:31.412+0000] {logging_mixin.py:190} INFO - Обрабатывается файл: 0_20241208090143.avro
+[2024-12-09T10:07:31.452+0000] {logging_mixin.py:190} INFO - Сообщение отправлено в Kafka на топик data.travelagency.avro.receipt1
+[2024-12-09T10:07:31.455+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-09T10:07:31.474+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-09T10:07:31.476+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=s3_to_kafka_avro, task_id=read_from_minio, run_id=manual__2024-12-09T10:07:19.296888+00:00, execution_date=20241209T100719, start_date=20241209T100724, end_date=20241209T100731
+[2024-12-09T10:07:31.544+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-09T10:07:31.560+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-09T10:07:31.562+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

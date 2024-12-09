@@ -1,0 +1,201 @@
+[2024-12-09T11:10:49.976+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-09T11:10:50.009+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag2_kafka_s3.consume_from_kafka manual__2024-12-09T11:10:41.957483+00:00 [queued]>
+[2024-12-09T11:10:50.028+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag2_kafka_s3.consume_from_kafka manual__2024-12-09T11:10:41.957483+00:00 [queued]>
+[2024-12-09T11:10:50.029+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-09T11:10:50.054+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): consume_from_kafka> on 2024-12-09 11:10:41.957483+00:00
+[2024-12-09T11:10:50.065+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3157) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-09T11:10:50.068+0000] {standard_task_runner.py:72} INFO - Started process 3159 to run task
+[2024-12-09T11:10:50.068+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag2_kafka_s3', 'consume_from_kafka', 'manual__2024-12-09T11:10:41.957483+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/dag2_kafka_s3.py', '--cfg-path', '/tmp/tmpqomcl6tt']
+[2024-12-09T11:10:50.073+0000] {standard_task_runner.py:105} INFO - Job 54: Subtask consume_from_kafka
+[2024-12-09T11:10:50.188+0000] {task_command.py:467} INFO - Running <TaskInstance: dag2_kafka_s3.consume_from_kafka manual__2024-12-09T11:10:41.957483+00:00 [running]> on host c23cf8b5bd6f
+[2024-12-09T11:10:50.363+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag2_kafka_s3' AIRFLOW_CTX_TASK_ID='consume_from_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-09T11:10:41.957483+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-09T11:10:41.957483+00:00'
+[2024-12-09T11:10:50.365+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-09T11:10:53.897+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:53.898+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-09T11:10:53.899+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:53.900+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-09T11:10:54.127+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.129+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.130+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-09T11:10:54.131+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.132+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-09T11:10:54.247+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.250+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.251+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-09T11:10:54.252+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.254+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-09T11:10:54.356+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.360+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.363+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-09T11:10:54.366+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.369+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-09T11:10:54.485+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.488+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.491+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-09T11:10:54.493+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.495+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-09T11:10:54.592+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.593+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.594+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-09T11:10:54.594+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.595+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-09T11:10:54.662+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.663+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.664+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-09T11:10:54.666+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.667+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-09T11:10:54.766+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.768+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.769+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-09T11:10:54.770+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.771+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-09T11:10:54.855+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.857+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.858+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e3\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16\x1aOmelyan Kmita\x141960-07-06\x1eOliver Johansen\x141994-09-23\x0002024-12-08T00:01:55.233Z'
+[2024-12-09T11:10:54.859+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.860+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e3\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16\x1aOmelyan Kmita\x141960-07-06\x1eOliver Johansen\x141994-09-23\x0002024-12-08T00:01:55.233Z'
+[2024-12-09T11:10:54.944+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:54.945+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:54.946+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067563356841416fc3c000b87L\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x16Shane Payne\x141968-06-20\x1cDimas Teixeira\x141960-08-16&\xd9\x85\xd9\x87\xd8\xb1\xd8\xb3\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141962-04-29"Vedat Evliyao\xc4\x9flu\x141984-01-03\x0002024-12-09T00:01:23.777Z'
+[2024-12-09T11:10:54.948+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:54.949+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067563356841416fc3c000b87L\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x16Shane Payne\x141968-06-20\x1cDimas Teixeira\x141960-08-16&\xd9\x85\xd9\x87\xd8\xb1\xd8\xb3\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141962-04-29"Vedat Evliyao\xc4\x9flu\x141984-01-03\x0002024-12-09T00:01:23.777Z'
+[2024-12-09T11:10:55.031+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111054.avro
+[2024-12-09T11:10:55.033+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.034+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067563356841416fc3c000b89\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16\x1cCesar Guerrero\x141970-09-04*\xd9\x85\xd9\x84\xdb\x8c\xd9\x86\xd8\xa7 \xd8\xa7\xd8\xad\xd9\x85\xd8\xaf\xdb\x8c\x141950-06-23\x0002024-12-09T00:01:26.453Z'
+[2024-12-09T11:10:55.035+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.036+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067563356841416fc3c000b89\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16\x1cCesar Guerrero\x141970-09-04*\xd9\x85\xd9\x84\xdb\x8c\xd9\x86\xd8\xa7 \xd8\xa7\xd8\xad\xd9\x85\xd8\xaf\xdb\x8c\x141950-06-23\x0002024-12-09T00:01:26.453Z'
+[2024-12-09T11:10:55.109+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.111+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.112+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067563356841416fc3c000b8a\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11"Reinaldo Monteiro\x141957-07-09\x0002024-12-09T00:01:26.961Z'
+[2024-12-09T11:10:55.113+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.113+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067563356841416fc3c000b8a\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11"Reinaldo Monteiro\x141957-07-09\x0002024-12-09T00:01:26.961Z'
+[2024-12-09T11:10:55.194+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.196+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.197+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-09T11:10:55.198+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.199+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-09T11:10:55.293+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.295+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.296+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-09T11:10:55.297+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.298+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-09T11:10:55.376+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.378+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.379+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-09T11:10:55.380+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.381+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-09T11:10:55.459+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.463+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.464+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-09T11:10:55.466+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.468+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-09T11:10:55.554+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.556+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.558+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-09T11:10:55.559+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.561+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-09T11:10:55.654+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.656+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.657+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-09T11:10:55.659+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.660+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-09T11:10:55.750+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.754+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.760+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-09T11:10:55.762+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.763+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-09T11:10:55.909+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:55.911+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:55.912+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-09T11:10:55.914+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:55.916+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-09T11:10:56.033+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111055.avro
+[2024-12-09T11:10:56.035+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.037+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-09T11:10:56.039+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.042+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-09T11:10:56.149+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.153+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.155+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-09T11:10:56.156+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.157+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-09T11:10:56.283+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.287+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.290+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-09T11:10:56.293+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.308+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-09T11:10:56.468+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.470+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.472+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e2\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29 Clairta Teixeira\x141949-02-01\x1cFletcher Singh\x141979-02-19(Biljana \xc5\xa0erbed\xc5\xbeija\x141972-10-30\x1eSakarias Sheikh\x141945-06-11\x0002024-12-08T00:01:54.228Z'
+[2024-12-09T11:10:56.473+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.475+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e2\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29 Clairta Teixeira\x141949-02-01\x1cFletcher Singh\x141979-02-19(Biljana \xc5\xa0erbed\xc5\xbeija\x141972-10-30\x1eSakarias Sheikh\x141945-06-11\x0002024-12-08T00:01:54.228Z'
+[2024-12-09T11:10:56.587+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.590+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.592+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067563356841416fc3c000b88\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cJohanne Madsen\x141972-08-27\x1cLydia Mitchell\x141956-05-28\x16Mark Dumont\x141994-04-08\x1cSimon Pedersen\x142000-05-24\x0002024-12-09T00:01:25.498Z'
+[2024-12-09T11:10:56.593+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.595+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067563356841416fc3c000b88\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cJohanne Madsen\x141972-08-27\x1cLydia Mitchell\x141956-05-28\x16Mark Dumont\x141994-04-08\x1cSimon Pedersen\x142000-05-24\x0002024-12-09T00:01:25.498Z'
+[2024-12-09T11:10:56.697+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.699+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.700+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-09T11:10:56.701+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.702+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-09T11:10:56.781+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.783+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.784+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-09T11:10:56.784+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.785+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-09T11:10:56.862+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.864+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.865+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-09T11:10:56.865+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.866+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-09T11:10:56.937+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:56.939+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:56.940+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-09T11:10:56.941+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:56.941+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-09T11:10:57.014+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111056.avro
+[2024-12-09T11:10:57.017+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:57.018+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-09T11:10:57.019+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:57.019+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-09T11:10:57.087+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111057.avro
+[2024-12-09T11:10:57.089+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:57.090+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-09T11:10:57.091+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:57.092+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-09T11:10:57.172+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111057.avro
+[2024-12-09T11:10:57.174+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:57.200+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e1L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-08T00:01:52.275Z'
+[2024-12-09T11:10:57.233+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:57.243+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e1L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-08T00:01:52.275Z'
+[2024-12-09T11:10:57.437+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111057.avro
+[2024-12-09T11:10:57.438+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-09T11:10:57.440+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e4\x08\x08\xf0\xd4\x02\x06SYD\x06LIS\x06\x06\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1aElla Jennings\x141948-04-23\x12Anna Wood\x141960-06-17\x0002024-12-08T00:01:56.160Z'
+[2024-12-09T11:10:57.440+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-09T11:10:57.441+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06754e1f4d01bf1edff1b98e4\x08\x08\xf0\xd4\x02\x06SYD\x06LIS\x06\x06\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1aElla Jennings\x141948-04-23\x12Anna Wood\x141960-06-17\x0002024-12-08T00:01:56.160Z'
+[2024-12-09T11:10:57.529+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241209111057.avro
+[2024-12-09T11:11:03.532+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:03.534+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:09.536+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:09.538+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:15.540+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:15.542+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:21.544+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:21.545+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:27.549+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:27.552+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:33.554+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:33.556+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:39.557+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:39.557+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:45.559+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:45.560+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:51.562+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:51.563+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:11:57.565+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:11:57.566+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-09T11:12:03.571+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-09T11:12:03.573+0000] {logging_mixin.py:190} INFO - No message received

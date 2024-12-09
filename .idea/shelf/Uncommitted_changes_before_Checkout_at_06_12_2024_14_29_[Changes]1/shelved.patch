@@ -1,0 +1,996 @@
+Index: dags/dag2_Kafkas3.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># from io import BytesIO\r\n# from typing import Any, Dict\r\n# import confluent_kafka\r\n# from airflow import DAG\r\n# #from airflow.models import Variable\r\n# from airflow.operators.python import PythonOperator\r\n# from datetime import datetime\r\n# from confluent_kafka import Consumer, KafkaException\r\n# import boto3\r\n# import json\r\n# import fastavro\r\n# from confluent_kafka.schema_registry import SchemaRegistryClient\r\n# from confluent_kafka.schema_registry.avro import AvroSerializer, AvroDeserializer\r\n# from confluent_kafka.serialization import SerializationContext, MessageField\r\n#\r\n# #import dlt\r\n#\r\n# #from helpers.kafka.consumer import avro_deserializer\r\n# #from ingest.kafka import kafka_consumer\r\n#\r\n#\r\n# #\r\n# # def write_json_to_avro(json_data):\r\n# #         schema_registry_conf = {'url': 'http://localhost:8085'}  # URL реестра схем\r\n# #         schema_registry_client = SchemaRegistryClient(schema_registry_conf)\r\n# #         # Получение списка всех subjects\r\n# #         subjects = schema_registry_client.get_subjects()\r\n# #         print(\"Список доступных схем (subjects):\")\r\n# #         for subject in subjects:\r\n# #             print(subject)\r\n# #         subject_name = \"avro_shema\"  # Замените на ваше имя схемы\r\n# #         try:\r\n# #             schema_response = schema_registry_client.get_latest_version(subject_name)\r\n# #             schema_str = schema_response.schema.schema_str\r\n# #             print(f\"Latest schema for subject '{subject_name}':\\n{schema_str}\")\r\n# #         except Exception as e:\r\n# #             print(f\"Error retrieving latest schema for subject '{subject_name}': {e}\")\r\n# #\r\n# #\r\n# #         schema = json.loads(schema_str)\r\n# #         avro_serializer = AvroSerializer(schema_registry_client=schema_registry_client)\r\n# #         # Сериализация JSON в Avro\r\n# #         serialized_data = avro_serializer(\r\n# #             json_data,\r\n# #             SerializationContext(\"my_topic\", MessageField.VALUE)\r\n# #         )\r\n# #         print(serialized_data)\r\n# #         buffer = BytesIO()\r\n# #         fastavro.writer(buffer, schema, serialized_data)\r\n# #         return buffer\r\n# # #\r\n#\r\n# def consume_kafka_to_minio(**kwargs):\r\n#\r\n#     consumer = Consumer({\r\n#         'bootstrap.servers': 'kafka:9092',\r\n#         'sasl.mechanism': 'PLAIN',\r\n#         'security.protocol': 'PLAINTEXT',\r\n#         'group.id': 'group.id',\r\n#         'auto.offset.reset': 'earliest'\r\n#     })\r\n#\r\n#     KAFKA_TOPIC = \"my_topic\"\r\n#     #consumer.subscribe([KAFKA_TOPIC])\r\n#\r\n#     # Подключение к MinIO через boto3\r\n#     s3_client = boto3.client(\r\n#         's3',\r\n#         endpoint_url=\"http://minio:9000\",  # Указываем адрес MinIO\r\n#         aws_access_key_id=\"uNVVo4yHBhFHRB2nM08b\",\r\n#         aws_secret_access_key=\"27vvBm4pg36OVvjyeNge1MrsIQPYNWaPqiN7yet6\"\r\n#     )\r\n#\r\n#     S3_BUCKET_NAME = \"test-bucket\"\r\n#     S3_KEY_PREFIX = \"kafka_data/\"\r\n#\r\n#     schema_registry_client = SchemaRegistryClient({\r\n#         'url': \"http://localhost:8085\",\r\n#     })\r\n#\r\n#     avro_deserializer = AvroDeserializer(schema_registry_client)\r\n#\r\n#     consumer.subscribe([KAFKA_TOPIC])\r\n#     while True:\r\n#         msg = consumer.poll(1.0)\r\n#         if msg is None:\r\n#             continue\r\n#         deserialized_key = avro_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))\r\n#         deserialized_value = avro_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))\r\n#\r\n#         if deserialized_value is not None:\r\n#             print(\"Key {}: Value{} \\n\".format(deserialized_key, deserialized_value))\r\n#\r\n#     consumer.close()\r\n#\r\n#     # try:\r\n#     #     # Подписываемся на топик\r\n#     #     consumer.subscribe([KAFKA_TOPIC])\r\n#     #\r\n#     #     print(f\"Подписан на топик: {KAFKA_TOPIC}\")\r\n#     #     while True:\r\n#     #         # Читаем сообщение (таймаут 1 сек)\r\n#     #         msg = consumer.poll(5.0)\r\n#     #\r\n#     #         if msg is None:\r\n#     #             print(\"нет сообщений\")\r\n#     #             continue  # Нет новых сообщений\r\n#     #         if msg.error():\r\n#     #             # Обрабатываем ошибку\r\n#     #             if msg.error().code() == KafkaException._PARTITION_EOF:\r\n#     #                 print(\"Достигнут конец раздела\")\r\n#     #             else:\r\n#     #                 print(f\"Ошибка: {msg.error()}\")\r\n#     #                 break\r\n#     #         else:\r\n#     #             # Выводим сообщение\r\n#     #             print(f\"Получено сообщение: {msg.value().decode('utf-8')} от {msg.topic()}[{msg.partition()}]\")\r\n#     #         # Десериализация JSON сообщения\r\n#     #         message_value = msg.value().decode('utf-8')\r\n#     #         print(f\"Received message: {message_value}\")\r\n#     #         json_data = json.loads(message_value)\r\n#     #\r\n#     #         # Преобразуем JSON в список для Avro (fastavro ожидает массив записей)\r\n#     #         #avro_data = [json_data]\r\n#     #\r\n#     #         # Записываем данные в формате Avro в буфер\r\n#     #         avro_buffer = write_json_to_avro(json_data)\r\n#     #         #print(avro_buffer)\r\n#     #\r\n#     #         # Генерируем ключ для файла в S3\r\n#     #         s3_key = f\"{S3_KEY_PREFIX}{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.avro\"\r\n#     #\r\n#     #         s3_client.put_object(\r\n#     #             Bucket=S3_BUCKET_NAME,\r\n#     #             Key=s3_key,\r\n#     #             Body=avro_buffer.getvalue(),\r\n#     #             ContentType='application/octet-stream'\r\n#     #         )\r\n#     #         print(f\"Uploaded Avro file to MinIO: {s3_key}\")\r\n#     # except Exception as e:\r\n#     #         print(f\"Error: {e}\")\r\n#     # finally:\r\n#     #         consumer.close()\r\n#\r\n#\r\n# #consume_kafka_to_minio()\r\n#\r\n# # def check_minio_connection(**kwargs):\r\n# #     import boto3\r\n# #     \"\"\"\r\n# #     Проверяет подключение к MinIO и наличие указанного бакета.\r\n# #     \"\"\"\r\n# #     try:\r\n# #         # Подключение к MinIO через boto3\r\n# #         s3_client = boto3.client(\r\n# #             's3',\r\n# #             # endpoint_url=connect_s3().endpoint_url,\r\n# #             # aws_access_key_id= connect_s3().access_key,\r\n# #             # aws_secret_access_key=connect_s3().secret_key\r\n# #             endpoint_url=\"http://minio:9000\",  # Указываем адрес MinIO\r\n# #             aws_access_key_id=\"uNVVo4yHBhFHRB2nM08b\",\r\n# #             aws_secret_access_key=\"27vvBm4pg36OVvjyeNge1MrsIQPYNWaPqiN7yet6\"\r\n# #         )\r\n# #         # Проверка наличия бакета\r\n# #         response = s3_client.list_buckets()\r\n# #         bucket_names = [bucket['Name'] for bucket in response.get('Buckets', [])]\r\n# #         S3_BUCKET_NAME=\"test-bucket\"\r\n# #\r\n# #         if S3_BUCKET_NAME in bucket_names:\r\n# #             print(f\"Bucket '{S3_BUCKET_NAME}' доступен.\")\r\n# #         else:\r\n# #             print(f\"Bucket '{S3_BUCKET_NAME}' не найден.\")\r\n# #             raise ValueError(f\"Bucket '{S3_BUCKET_NAME}' отсутствует в MinIO.\")\r\n# #\r\n# #     except Exception as e:\r\n# #         print(f\"Ошибка подключения к MinIO: {e}\")\r\n# #         raise\r\n#\r\n#\r\n#\r\n#\r\n#\r\n#\r\n# #Создаем DAG\r\n# default_args = {\r\n#     'owner': 'airflow',\r\n#     'depends_on_past': False,\r\n#     'start_date': datetime(2023, 1, 1),\r\n#     'retries': 1,\r\n# }\r\n#\r\n# with DAG('kafka_to_minio', default_args=default_args, schedule_interval='@daily', catchup=False) as dag:\r\n#     # test = PythonOperator(\r\n#     #     task_id=\"test\",\r\n#     #     python_callable=check_minio_connection\r\n#     # )\r\n#\r\n#     kafkaS3 = PythonOperator(\r\n#         task_id='kafka_data',\r\n#         python_callable=consume_kafka_to_minio\r\n#     )\r\n#\r\n#\r\n# # # #test>>kafkaS3
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dags/dag2_Kafkas3.py b/dags/dag2_Kafkas3.py
+--- a/dags/dag2_Kafkas3.py	
++++ b/dags/dag2_Kafkas3.py	
+@@ -1,204 +1,69 @@
+-# from io import BytesIO
+-# from typing import Any, Dict
+-# import confluent_kafka
+-# from airflow import DAG
+-# #from airflow.models import Variable
+-# from airflow.operators.python import PythonOperator
+-# from datetime import datetime
+-# from confluent_kafka import Consumer, KafkaException
+-# import boto3
+-# import json
+-# import fastavro
+-# from confluent_kafka.schema_registry import SchemaRegistryClient
+-# from confluent_kafka.schema_registry.avro import AvroSerializer, AvroDeserializer
+-# from confluent_kafka.serialization import SerializationContext, MessageField
+-#
+-# #import dlt
+-#
+-# #from helpers.kafka.consumer import avro_deserializer
+-# #from ingest.kafka import kafka_consumer
+-#
+-#
+-# #
+-# # def write_json_to_avro(json_data):
+-# #         schema_registry_conf = {'url': 'http://localhost:8085'}  # URL реестра схем
+-# #         schema_registry_client = SchemaRegistryClient(schema_registry_conf)
+-# #         # Получение списка всех subjects
+-# #         subjects = schema_registry_client.get_subjects()
+-# #         print("Список доступных схем (subjects):")
+-# #         for subject in subjects:
+-# #             print(subject)
+-# #         subject_name = "avro_shema"  # Замените на ваше имя схемы
+-# #         try:
+-# #             schema_response = schema_registry_client.get_latest_version(subject_name)
+-# #             schema_str = schema_response.schema.schema_str
+-# #             print(f"Latest schema for subject '{subject_name}':\n{schema_str}")
+-# #         except Exception as e:
+-# #             print(f"Error retrieving latest schema for subject '{subject_name}': {e}")
+-# #
+-# #
+-# #         schema = json.loads(schema_str)
+-# #         avro_serializer = AvroSerializer(schema_registry_client=schema_registry_client)
+-# #         # Сериализация JSON в Avro
+-# #         serialized_data = avro_serializer(
+-# #             json_data,
+-# #             SerializationContext("my_topic", MessageField.VALUE)
+-# #         )
+-# #         print(serialized_data)
+-# #         buffer = BytesIO()
+-# #         fastavro.writer(buffer, schema, serialized_data)
+-# #         return buffer
+-# # #
+-#
+-# def consume_kafka_to_minio(**kwargs):
+-#
+-#     consumer = Consumer({
+-#         'bootstrap.servers': 'kafka:9092',
+-#         'sasl.mechanism': 'PLAIN',
+-#         'security.protocol': 'PLAINTEXT',
+-#         'group.id': 'group.id',
+-#         'auto.offset.reset': 'earliest'
+-#     })
+-#
+-#     KAFKA_TOPIC = "my_topic"
+-#     #consumer.subscribe([KAFKA_TOPIC])
+-#
+-#     # Подключение к MinIO через boto3
+-#     s3_client = boto3.client(
+-#         's3',
+-#         endpoint_url="http://minio:9000",  # Указываем адрес MinIO
+-#         aws_access_key_id="uNVVo4yHBhFHRB2nM08b",
+-#         aws_secret_access_key="27vvBm4pg36OVvjyeNge1MrsIQPYNWaPqiN7yet6"
+-#     )
+-#
+-#     S3_BUCKET_NAME = "test-bucket"
+-#     S3_KEY_PREFIX = "kafka_data/"
+-#
+-#     schema_registry_client = SchemaRegistryClient({
+-#         'url': "http://localhost:8085",
+-#     })
+-#
+-#     avro_deserializer = AvroDeserializer(schema_registry_client)
+-#
+-#     consumer.subscribe([KAFKA_TOPIC])
+-#     while True:
+-#         msg = consumer.poll(1.0)
+-#         if msg is None:
+-#             continue
+-#         deserialized_key = avro_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
+-#         deserialized_value = avro_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
+-#
+-#         if deserialized_value is not None:
+-#             print("Key {}: Value{} \n".format(deserialized_key, deserialized_value))
+-#
+-#     consumer.close()
+-#
+-#     # try:
+-#     #     # Подписываемся на топик
+-#     #     consumer.subscribe([KAFKA_TOPIC])
+-#     #
+-#     #     print(f"Подписан на топик: {KAFKA_TOPIC}")
+-#     #     while True:
+-#     #         # Читаем сообщение (таймаут 1 сек)
+-#     #         msg = consumer.poll(5.0)
+-#     #
+-#     #         if msg is None:
+-#     #             print("нет сообщений")
+-#     #             continue  # Нет новых сообщений
+-#     #         if msg.error():
+-#     #             # Обрабатываем ошибку
+-#     #             if msg.error().code() == KafkaException._PARTITION_EOF:
+-#     #                 print("Достигнут конец раздела")
+-#     #             else:
+-#     #                 print(f"Ошибка: {msg.error()}")
+-#     #                 break
+-#     #         else:
+-#     #             # Выводим сообщение
+-#     #             print(f"Получено сообщение: {msg.value().decode('utf-8')} от {msg.topic()}[{msg.partition()}]")
+-#     #         # Десериализация JSON сообщения
+-#     #         message_value = msg.value().decode('utf-8')
+-#     #         print(f"Received message: {message_value}")
+-#     #         json_data = json.loads(message_value)
+-#     #
+-#     #         # Преобразуем JSON в список для Avro (fastavro ожидает массив записей)
+-#     #         #avro_data = [json_data]
+-#     #
+-#     #         # Записываем данные в формате Avro в буфер
+-#     #         avro_buffer = write_json_to_avro(json_data)
+-#     #         #print(avro_buffer)
+-#     #
+-#     #         # Генерируем ключ для файла в S3
+-#     #         s3_key = f"{S3_KEY_PREFIX}{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.avro"
+-#     #
+-#     #         s3_client.put_object(
+-#     #             Bucket=S3_BUCKET_NAME,
+-#     #             Key=s3_key,
+-#     #             Body=avro_buffer.getvalue(),
+-#     #             ContentType='application/octet-stream'
+-#     #         )
+-#     #         print(f"Uploaded Avro file to MinIO: {s3_key}")
+-#     # except Exception as e:
+-#     #         print(f"Error: {e}")
+-#     # finally:
+-#     #         consumer.close()
+-#
+-#
+-# #consume_kafka_to_minio()
+-#
+-# # def check_minio_connection(**kwargs):
+-# #     import boto3
+-# #     """
+-# #     Проверяет подключение к MinIO и наличие указанного бакета.
+-# #     """
+-# #     try:
+-# #         # Подключение к MinIO через boto3
+-# #         s3_client = boto3.client(
+-# #             's3',
+-# #             # endpoint_url=connect_s3().endpoint_url,
+-# #             # aws_access_key_id= connect_s3().access_key,
+-# #             # aws_secret_access_key=connect_s3().secret_key
+-# #             endpoint_url="http://minio:9000",  # Указываем адрес MinIO
+-# #             aws_access_key_id="uNVVo4yHBhFHRB2nM08b",
+-# #             aws_secret_access_key="27vvBm4pg36OVvjyeNge1MrsIQPYNWaPqiN7yet6"
+-# #         )
+-# #         # Проверка наличия бакета
+-# #         response = s3_client.list_buckets()
+-# #         bucket_names = [bucket['Name'] for bucket in response.get('Buckets', [])]
+-# #         S3_BUCKET_NAME="test-bucket"
+-# #
+-# #         if S3_BUCKET_NAME in bucket_names:
+-# #             print(f"Bucket '{S3_BUCKET_NAME}' доступен.")
+-# #         else:
+-# #             print(f"Bucket '{S3_BUCKET_NAME}' не найден.")
+-# #             raise ValueError(f"Bucket '{S3_BUCKET_NAME}' отсутствует в MinIO.")
+-# #
+-# #     except Exception as e:
+-# #         print(f"Ошибка подключения к MinIO: {e}")
+-# #         raise
+-#
+-#
+-#
+-#
+-#
+-#
+-# #Создаем DAG
+-# default_args = {
+-#     'owner': 'airflow',
+-#     'depends_on_past': False,
+-#     'start_date': datetime(2023, 1, 1),
+-#     'retries': 1,
+-# }
+-#
+-# with DAG('kafka_to_minio', default_args=default_args, schedule_interval='@daily', catchup=False) as dag:
+-#     # test = PythonOperator(
+-#     #     task_id="test",
+-#     #     python_callable=check_minio_connection
+-#     # )
+-#
+-#     kafkaS3 = PythonOperator(
+-#         task_id='kafka_data',
+-#         python_callable=consume_kafka_to_minio
+-#     )
+-#
+-#
+-# # # #test>>kafkaS3
+\ No newline at end of file
++from io import BytesIO
++from typing import Any, Dict
++import confluent_kafka
++from airflow import DAG
++from airflow.models import Connection
++#from airflow.models import Variable
++from airflow.operators.python import PythonOperator
++from datetime import datetime
++
++#from airflow.providers.apache.kafka.operators.consume import ConsumeFromTopicOperator
++from airflow.utils import db
++from confluent_kafka import Consumer, KafkaException
++import boto3
++import json
++import fastavro
++from confluent_kafka.admin import AdminClient
++from confluent_kafka.schema_registry import SchemaRegistryClient
++from confluent_kafka.schema_registry.avro import AvroSerializer, AvroDeserializer
++from confluent_kafka.serialization import SerializationContext, MessageField
++
++
++
++def consume_kafka(**kwargs):
++    schema_registry_client = SchemaRegistryClient({
++        'url': "http://172.30.181.198:8085",
++    })
++
++    avro_deserializer = AvroDeserializer(schema_registry_client)
++
++    consumer = Consumer({
++        'bootstrap.servers': '172.30.181.198:9092',
++        'sasl.mechanism': 'PLAIN',
++        'security.protocol': 'PLAINTEXT',
++        'group.id': 'prodcy',
++        'auto.offset.reset': 'earliest'
++    })
++
++    consumer.subscribe(["data.travelagency.avro.receipt"])
++
++    while True:
++        msg = consumer.poll(5.0)  # Wait for a message for 3 seconds
++
++        if msg is None:
++            print('No message received')
++        elif msg.error():
++            print('Error: {}'.format(msg.error()))
++        else:
++            print("Received message:", msg.value())
++            deserialized_value = avro_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
++            deserialized_key = avro_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
++            print("Deserialized Value:", deserialized_value)
++            print("Deserialized Key:", deserialized_key)
++    consumer.close()
++
++
++#Создаем DAG
++default_args = {
++    'owner': 'airflow',
++    'depends_on_past': False,
++    'start_date': datetime(2023, 1, 1),
++    'retries': 1,
++}
++
++with DAG('dag2', default_args=default_args, schedule_interval='@daily', catchup=False) as dag:
++    consume_from_topic = PythonOperator(
++        task_id='consume_from_kafka',
++        python_callable=consume_kafka,
++        provide_context=True,  # Pass Airflow context to the function
++    )
+Index: dags/dag1_MongoKafka.py
+===================================================================
+diff --git a/dags/dag1_MongoKafka.py b/dags/dag1_MongoKafka.py
+deleted file mode 100644
+--- a/dags/dag1_MongoKafka.py	
++++ /dev/null	
+@@ -1,227 +0,0 @@
+-from datetime import datetime, timedelta
+-
+-import json
+-
+-import confluent_kafka
+-from bson import ObjectId
+-from airflow import DAG
+-from airflow.operators.python import PythonOperator
+-from pymongo import MongoClient
+-from confluent_kafka import Producer, Consumer
+-
+-
+-
+-#Функция для преобразования данных MongoDB (с ObjectId) в JSON
+-def mongo_to_json(doc):
+-    for key, value in doc.items():
+-        if isinstance(value, ObjectId):
+-            doc[key] = str(value)
+-    return doc
+-
+-def convert_datetimes(obj):
+-    if isinstance(obj, dict):
+-        return {key: convert_datetimes(value) for key, value in obj.items()}
+-    elif isinstance(obj, list):
+-        return [convert_datetimes(item) for item in obj]
+-    elif isinstance(obj, datetime):
+-        return obj.isoformat()
+-    else:
+-        return obj
+-
+-# Функция для подключения к MongoDB и извлечения данных
+-def fetch_data_from_mongo():
+-    mongo_url = "mongodb+srv://smartintegratordev:YV1ZVX0XbmgGfaq0@cluster0.9kxy2.mongodb.net"
+-    database_name = "data_platform_si"
+-    collection_name = "Receipt"
+-
+-    # Подключение к MongoDB
+-    client = MongoClient(mongo_url)
+-    db = client[database_name]
+-    collection = db[collection_name]
+-
+-    # Пример: Извлечение всех документов
+-    documents = list(collection.find().limit(1))
+-    print(f"Извлечено {len(documents)} документов из MongoDB")
+-    documents_json=[]
+-    for doc in documents:
+-        doc = convert_datetimes(doc)
+-        doc = mongo_to_json(doc)
+-        print(doc)
+-        documents_json.append(doc)
+-    # Закрытие подключения
+-    client.close()
+-    return documents_json
+-
+-#
+-# def create_topic():
+-#         # Подключение к Kafka
+-#         admin_client = AdminClient({
+-#             'bootstrap.servers': 'localhost:9092'
+-#         })
+-#         topic_name = "topic"
+-#         num_partitions = 1
+-#         replication_factor = 1
+-#
+-#         # Подготовка топика
+-#         # Проверяем, существует ли топик
+-#         existing_topics = admin_client.list_topics(timeout=10).topics
+-#         if topic_name in existing_topics:
+-#             print(f"Топик '{topic_name}' уже существует.")
+-#             return
+-#         # Создаем топик
+-#         new_topic = NewTopic(topic_name, num_partitions=num_partitions, replication_factor=replication_factor)
+-#
+-#
+-#         # Отправляем запрос на создание
+-#         futures = admin_client.create_topics([new_topic])
+-#         for topic, future in futures.items():
+-#                     try:
+-#                      future.result()  # Ждем завершения
+-#                      print(f"Топик {topic} успешно создан!")
+-#                     except Exception as e:
+-#                         print(f"Ошибка создания топика {topic}: {e}")
+-#                         continue
+-#create_topic()
+-
+-# создание топика
+-
+-
+-#
+-# # Функция для отправки данных в Kafka
+-# def send_data_to_kafka(**kwargs):
+-#     # """
+-#     #     Отправляет сообщения через kafka
+-#     #     :param user_json: полученный пользователь
+-#     #     """
+-#     #
+-#     # producer = Producer(
+-#     #     {
+-#     #         "bootstrap.servers": "kafka:9092",
+-#     #         "sasl.mechanism": "SCRAM-SHA-256",
+-#     #         "security.protocol": "SASL_SSL"
+-#     #     }
+-#     # )
+-#     # user_json=fetch_data_from_mongo
+-#     # data_json = json.dumps(user_json)
+-#     #
+-#     #
+-#     # topic = "my_topic"
+-#     # producer.produce(topic, value=data_json)
+-#     # producer.flush()
+-#
+-#     kafka_bootstrap_servers = "kafka:9092"  # Адрес Kafka
+-#     topic_name = "topic"  # Название топика Kafka
+-#
+-#     # Создание Kafka Producer
+-#     producer = Producer({'bootstrap.servers': kafka_bootstrap_servers})
+-#
+-#     # Получение данных из предыдущей задачи (XCom)
+-#     #documents = kwargs['ti'].xcom_pull(task_ids='fetch_mongo_data')
+-#     documents=fetch_data_from_mongo()
+-#     if not documents:
+-#         print("Нет данных для отправки в Kafka")
+-#         return
+-#
+-#     # Отправка данных в Kafka
+-#     for doc in documents:
+-#         producer.produce(topic_name, value=json.dumps(doc))
+-#         # Отправка сообщения
+-#     # Очистка буфера
+-#         producer.flush()
+-#         print(f"Отправлено сообщение в Kafka: {doc}")
+-#
+-# def test():
+-#     # consumer = Consumer({
+-#     #     'bootstrap.servers': 'harmless-llama-10955-eu2-kafka.upstash.io:9092',
+-#     #     'sasl.mechanism': 'SCRAM-SHA-256',
+-#     #     'security.protocol': 'SASL_SSL',
+-#     #     'group.id': 'YOUR_CONSUMER_GROUP',
+-#     #     'auto.offset.reset': 'earliest'
+-#     # })
+-#     # consumer.subscribe(["my_topic"])
+-#     #
+-#     # try:
+-#     #     while True:
+-#     #         msg = consumer.poll(1.0)
+-#     #         if msg is None:
+-#     #             continue
+-#     #
+-#     #         if msg.error():
+-#     #             print(f"Consumer error: {msg.error()}")
+-#     #             continue
+-#     #
+-#     #         data = json.loads(msg.value().decode('utf-8'))
+-#     #         return data
+-#     # finally:
+-#     #     consumer.close()
+-#     conf = {
+-#         'bootstrap.servers': 'localhost:9092',
+-#         'group.id':  'test_goup_for_airflow',
+-#         'auto.offset.reset': 'earliest'
+-#     }
+-#
+-#     consumer = Consumer(conf)
+-#     consumer.subscribe(['topic'])
+-#
+-#     try:
+-#         while True:
+-#             msg = consumer.poll(1.0)
+-#             if msg is None:
+-#                 print("нет сообщений")
+-#                 continue
+-#             if msg.error():
+-#                 print(f"Ошибка: {msg.error()}")
+-#                 continue
+-#             print(f"Получено сообщение: {msg.value().decode('utf-8')}")
+-#
+-#     finally:
+-#         consumer.close()
+-#test()
+-#fetch_data_from_mongo()
+-#send_data_to_kafka()
+-
+-
+-
+-
+-
+-
+-# Параметры DAG
+-default_args = {
+-    'owner': 'airflow',
+-    'depends_on_past': False,
+-    'start_date': datetime(2024, 1, 1),
+-    'retries': 1,
+-    'retry_delay': timedelta(minutes=5),
+-}
+-
+-# Создание DAG
+-with DAG('mongo_to_kafka', default_args=default_args, schedule_interval='@daily', catchup=False) as dag:
+-
+-    fetch_mongo_data = PythonOperator(
+-        task_id='fetch_mongo_data',
+-        python_callable=fetch_data_from_mongo,
+-        provide_context=True
+-    )
+-
+-    # create_topic = PythonOperator(
+-    #     task_id='create_topic',
+-    #     task_id='create_topic',
+-    #     python_callable=create_topic,
+-    #     provide_context=True
+-    # )
+-
+-    # # Задача: Отправка данных в Kafka
+-    # send_to_kafka = PythonOperator(
+-    #     task_id='send_to_kafka',
+-    #     python_callable=send_data_to_kafka,
+-    #     provide_context=True
+-    # )
+-
+-    # test = PythonOperator(
+-    #     task_id='test',
+-    #     python_callable=test,
+-    #     provide_context=True
+-    # )
+-
+-    #Последовательность выполнения
+-    #fetch_mongo_data >>create_topic>> send_to_kafka>>test
+Index: reciept_value.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/reciept_value.json b/reciept_value.json
+new file mode 100644
+--- /dev/null	
++++ b/reciept_value.json	
+@@ -0,0 +1,47 @@
++{
++  "type": "record",
++  "name": "ReceiptValue",
++  "namespace": "data.example.Receipt",
++  "fields": [
++    {
++      "name": "_id",
++      "type": {
++        "type": "record",
++        "name": "ObjectId",
++        "fields": [
++          {"name": "oid", "type": "string"}
++        ]
++      }
++    },
++    {"name": "travel", "type": "int"},
++    {"name": "payer", "type": "int"},
++    {"name": "amount", "type": "int"},
++    {"name": "code_departure", "type": "string"},
++    {"name": "code_arrival", "type": "string"},
++    {"name": "number_of_passengers", "type": "int"},
++    {
++      "name": "passengers",
++      "type": {
++        "type": "array",
++        "items": {
++          "type": "record",
++          "name": "Passenger",
++          "fields": [
++            {"name": "name", "type": "string"},
++            {"name": "birth_date", "type": "string"}
++          ]
++        }
++      }
++    },
++    {
++      "name": "created",
++      "type": {
++        "type": "record",
++        "name": "CreatedDate",
++        "fields": [
++          {"name": "date", "type": "string", "logicalType": "timestamp-millis"}
++        ]
++      }
++    }
++  ]
++}
+Index: dags/test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dags/test.py b/dags/test.py
+new file mode 100644
+--- /dev/null	
++++ b/dags/test.py	
+@@ -0,0 +1,235 @@
++import logging
++from datetime import datetime, timedelta
++from time import time
++from pymongo import MongoClient
++from bson import json_util
++import json
++
++
++from confluent_kafka import Producer
++from confluent_kafka.serialization import StringSerializer, SerializationContext, MessageField
++from confluent_kafka.schema_registry import SchemaRegistryClient, Schema
++from confluent_kafka.schema_registry.avro import AvroSerializer
++from confluent_kafka.admin import AdminClient
++from confluent_kafka.cimpl import NewTopic
++
++MODULE_NAME = "logs.txt"
++
++MONGO_HOST = "mongodb+srv://smartintegratordev:YV1ZVX0XbmgGfaq0@cluster0.9kxy2.mongodb.net/"
++
++KAFKA_URL = '172.30.181.198:9092'
++TOPIC_NAME = 'data.travelagency.avro.receipt1'
++
++SCHEMA_REGISTRY_URL = "http://172.30.181.198:8085"
++#SCHEMA_NAME = "data.travelagency.avro.receipt1"
++
++
++client = MongoClient(
++    host=MONGO_HOST,
++)
++
++db = client["data_platform_si"]
++
++collection = db["Receipt"]
++
++start_date = datetime(2024, 12, 1)
++end_date = datetime(2024, 12, 11)
++
++query = {
++    "created": {
++        "$gte": start_date,
++        "$lt": end_date
++    }
++}
++
++documents_list = list(collection.find(query))
++json_result = json.dumps(documents_list, default=json_util.default)
++#json_result =json_result[0]
++print(json_result)
++
++producer_conf = {
++    'bootstrap.servers': KAFKA_URL,
++    'sasl.mechanism': 'PLAIN',
++    'security.protocol': 'PLAINTEXT',
++    'group.id': 'test_prod',	# produce_group
++    'auto.offset.reset': 'earliest',
++}
++
++schema_registry_conf = {
++    'url': SCHEMA_REGISTRY_URL,
++}
++
++# SCHEMA_VALUE = "reciept_value.json"
++#
++# with open(f"{SCHEMA_VALUE}", "r", encoding="utf-8") as f:
++#     deployment_schema_value = f.read()
++
++#print(deployment_schema_value)
++
++schema_registry_client = SchemaRegistryClient(
++	schema_registry_conf
++)
++#
++# try:
++#     schema_registry_client.register_schema(
++#         subject_name=SCHEMA_NAME,
++#         schema=Schema(schema_str=deployment_schema_value, schema_type='AVRO')
++#     )
++#
++#     schema_registry_client.set_compatibility(SCHEMA_NAME, 'BACKWARD')
++#     logging.info(f"Create new schema for {SCHEMA_NAME}.")
++# except Exception as e:
++#     logging.error(f"Error creating schema {SCHEMA_NAME}: {e}")
++
++admin_client = AdminClient(
++    {
++        'bootstrap.servers': KAFKA_URL,
++    }
++)
++
++# Edit if need
++num_partitions = 1
++replication_factor = 1
++
++if TOPIC_NAME not in admin_client.list_topics(timeout=10).topics:
++    NewTopic(
++        TOPIC_NAME,
++        num_partitions=num_partitions,
++        replication_factor=replication_factor
++    )
++
++    logging.info(f'Create topyk {TOPIC_NAME}')
++
++
++producer = Producer(producer_conf)
++
++# schema_registry_client = SchemaRegistryClient(schema_registry_conf)
++
++version: str|int = "latest"  # 1
++
++# schema_value_version = schema_registry_client.get_version(SCHEMA_NAME, version)
++#
++# registered_schema_value = schema_value_version.schema.schema_str
++#
++# avro_serializer_value = AvroSerializer(schema_registry_client, registered_schema_value)
++
++
++SCHEMA_KEY = "data.avro.receipt_key"
++SCHEMA_VALUE = "data.avro.receipt_value"
++#
++# with open(f"./schemas/V1__reciept_key.json", "r", encoding="utf-8") as f:
++#     deployment_schema_key = f.read()
++#
++# print(deployment_schema_key)
++#
++# with open(f"./schemas/reciept_value.json", "r", encoding="utf-8") as f:
++#     deployment_schema_value = f.read()
++#
++# print(deployment_schema_value)
++
++
++schema_registry_conf = {
++    'url': 'http://172.30.181.198:8085',
++
++}
++
++#producer = Producer(producer_conf)
++
++schema_registry_client = SchemaRegistryClient(schema_registry_conf)
++
++topic = 'data.travelagency.avro.receipt'
++schema1 = 'data.avro.receipt_value'
++schema2 = 'data.avro.receipt_key'
++#version: str | int = "latest"  # 1
++
++schema_version1 = schema_registry_client.get_version(schema1, version)
++schema_version2 = schema_registry_client.get_version(schema2, version)
++registered_schema1 = schema_version1.schema.schema_str
++registered_schema2 = schema_version2.schema.schema_str
++
++#avro_serializer = AvroSerializer(schema_registry_client, registered_schema)
++
++producer = Producer(producer_conf)
++
++avro_serializer_key = AvroSerializer(schema_registry_client, registered_schema2)
++avro_serializer_value = AvroSerializer(schema_registry_client, registered_schema1)
++
++msgs = json.loads(
++  	json_result
++		.replace("$", "")
++		.replace('"names"', '"passengers"')
++    	.replace('"number_of_names"', '"number_of_passengers"')
++      	.replace('"passenger"', '"name"')
++    )
++
++
++
++
++def get_key(msg: dict, pos: int) -> dict:
++	_id = msg["_id"]["oid"]
++	ts = int(time())
++
++	return {
++		"collection": "reciept",
++		"pos": pos,
++		"timestamp": ts,
++		"_id": _id
++		}
++
++
++def send_msg(msg: dict, pos: int) -> None:
++    try:
++        key_msg = get_key(msg=msg, pos=pos)
++
++        producer.produce(
++            topic=TOPIC_NAME,
++            key=avro_serializer_key(
++                key_msg,
++                SerializationContext(schema2, MessageField.KEY)
++            ),
++            value=avro_serializer_value(
++                msg,
++                SerializationContext(schema1, MessageField.VALUE)
++            )
++        )
++
++        producer.flush()
++
++        logging.info(f"Send msg: {key_msg}")
++
++    except Exception as e:
++        logging.error(f"{e}\nkey:{key_msg}\nvalue:{msg}")
++
++position = 0
++
++for msg in msgs:
++	send_msg(msg, position)
++	position += 1
++
++
++def send_msg(msg: dict, pos: int) -> None:
++    key_msg = ":".join(map(str, list(get_key(msg, pos=pos).values())))  # type str
++
++    producer.produce(
++        topic=TOPIC_NAME,
++        key=StringSerializer()(
++            key_msg,
++            SerializationContext(schema2, MessageField.KEY)
++        ),
++        value=StringSerializer()(
++            json.dumps(msg),
++            SerializationContext(schema1, MessageField.VALUE)
++        )
++    )
++
++    producer.flush()
++
++    logging.info(f"Send msg: {key_msg}")
++
++
++
++position = 0
++
++for msg in msgs:
++	send_msg(msg, position)
++	position += 1
+\ No newline at end of file
+Index: dags/reciept.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dags/reciept.json b/dags/reciept.json
+new file mode 100644
+--- /dev/null	
++++ b/dags/reciept.json	
+@@ -0,0 +1,58 @@
++{
++  "type": "record",
++  "name": "TravelRecord",
++  "fields": [
++    {
++      "name": "_id",
++      "type": "string"
++    },
++    {
++      "name": "travel",
++      "type": "int"
++    },
++    {
++      "name": "payer",
++      "type": "int"
++    },
++    {
++      "name": "amount",
++      "type": "int"
++    },
++    {
++      "name": "code_departure",
++      "type": "string"
++    },
++    {
++      "name": "code_arrival",
++      "type": "string"
++    },
++    {
++      "name": "number_of_passengers",
++      "type": "int"
++    },
++    {
++      "name": "passengers",
++      "type": {
++        "type": "array",
++        "items": {
++          "type": "record",
++          "name": "Passenger",
++          "fields": [
++            {
++              "name": "name",
++              "type": "string"
++            },
++            {
++              "name": "birth_date",
++              "type": "string"
++            }
++          ]
++        }
++      }
++    },
++    {
++      "name": "created",
++      "type": "string"
++    }
++  ]
++}
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.12 (kafka2)\" project-jdk-type=\"Python SDK\" />\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,4 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="Black">
++    <option name="sdkName" value="Python 3.12 (kafka2)" />
++  </component>
+   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (kafka2)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: dags/settings.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dags/settings.py b/dags/settings.py
+new file mode 100644
+--- /dev/null	
++++ b/dags/settings.py	
+@@ -0,0 +1,30 @@
++#from pydantic_settings import BaseSettings, SettingsConfigDict
++
++
++class Settings():
++    # model_config = SettingsConfigDict(
++    #     env_file=("..env.dev"),
++    #     env_file_encoding="utf-8",
++    # )
++
++    # MONGO_HOST: str
++    # KAFKA_URL: str
++    # TOPIC_NAME: str
++    # SCHEMA_REGISTRY_URL: str
++    # SCHEMA_NAME: str
++
++    MONGO_HOST = "mongodb+srv://smartintegratordev:YV1ZVX0XbmgGfaq0@cluster0.9kxy2.mongodb.net/"
++    KAFKA_URL = '172.30.181.198:9092'
++    TOPIC_NAME = 'mongodb.reciept.avro.test.msg'
++    SCHEMA_REGISTRY_URL = "http://172.30.181.198:8085"
++    SCHEMA_NAME = "mongodb.reciept.avro.testing.schema"
++    db = "data_platform_si"
++    collection = "Receipt"
++    schema1 = 'data.avro.receipt_value'
++    schema2 = 'data.avro.receipt_key'
++    TOPIC_NAME = 'data.travelagency.avro.receipt'
++    version: str | int = "latest"  # 1
++    SCHEMA_REGISTRY_URL = "http://172.30.181.198:8085"
++
++
++settings = Settings()
+\ No newline at end of file
+Index: docker-compose-airflow2.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Licensed to the Apache Software Foundation (ASF) under one\r\n# or more contributor license agreements.  See the NOTICE file\r\n# distributed with this work for additional information\r\n# regarding copyright ownership.  The ASF licenses this file\r\n# to you under the Apache License, Version 2.0 (the\r\n# \"License\"); you may not use this file except in compliance\r\n# with the License.  You may obtain a copy of the License at\r\n#\r\n#   http://www.apache.org/licenses/LICENSE-2.0\r\n#\r\n# Unless required by applicable law or agreed to in writing,\r\n# software distributed under the License is distributed on an\r\n# \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY\r\n# KIND, either express or implied.  See the License for the\r\n# specific language governing permissions and limitations\r\n# under the License.\r\n#\r\n\r\n# Basic Airflow cluster configuration for CeleryExecutor with Redis and PostgreSQL.\r\n#\r\n# WARNING: This configuration is for local development. Do not use it in a production deployment.\r\n#\r\n# This configuration supports basic configuration using environment variables or an .env file\r\n# The following variables are supported:\r\n#\r\n# AIRFLOW_IMAGE_NAME           - Docker image name used to run Airflow.\r\n#                                Default: apache/airflow:2.10.3\r\n# AIRFLOW_UID                  - User ID in Airflow containers\r\n#                                Default: 50000\r\n# AIRFLOW_PROJ_DIR             - Base path to which all the files will be volumed.\r\n#                                Default: .\r\n# Those configurations are useful mostly in case of standalone testing/running Airflow in test/try-out mode\r\n#\r\n# _AIRFLOW_WWW_USER_USERNAME   - Username for the administrator account (if requested).\r\n#                                Default: airflow\r\n# _AIRFLOW_WWW_USER_PASSWORD   - Password for the administrator account (if requested).\r\n#                                Default: airflow\r\n# _PIP_ADDITIONAL_REQUIREMENTS - Additional PIP requirements to add when starting all containers.\r\n#                                Use this option ONLY for quick checks. Installing requirements at container\r\n#                                startup is done EVERY TIME the service is started.\r\n#                                A better way is to build a custom image or extend the official image\r\n#                                as described in https://airflow.apache.org/docs/docker-stack/build.html.\r\n#                                Default: ''\r\n#\r\n# Feel free to modify this file to suit your needs.\r\n---\r\nx-airflow-common:\r\n  &airflow-common\r\n  # In order to add custom dependencies or upgrade provider packages you can use your extended image.\r\n  # Comment the image line, place your Dockerfile in the directory where you placed the docker-compose.yaml\r\n  # and uncomment the \"build\" line below, Then run `docker-compose build` to build the images.\r\n  image: ${AIRFLOW_IMAGE_NAME:-apache/airflow:2.10.3}\r\n  # build: .\r\n  environment:\r\n    &airflow-common-env\r\n    AIRFLOW__CORE__EXECUTOR: CeleryExecutor\r\n    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow\r\n    AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:airflow@postgres/airflow\r\n    AIRFLOW__CELERY__BROKER_URL: redis://:@redis:6379/0\r\n    AIRFLOW__CORE__FERNET_KEY: ''\r\n    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'\r\n    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'\r\n    AIRFLOW__API__AUTH_BACKENDS: 'airflow.api.auth.backend.basic_auth,airflow.api.auth.backend.session'\r\n    AIRFLOW__CORE__TEST_CONNECTION: 'Enabled'\r\n    # yamllint disable rule:line-length\r\n    # Use simple http server on scheduler for health checks\r\n    # See https://airflow.apache.org/docs/apache-airflow/stable/administration-and-deployment/logging-monitoring/check-health.html#scheduler-health-check-server\r\n    # yamllint enable rule:line-length\r\n    AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'\r\n    # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks\r\n    # for other purpose (development, test and especially production usage) build/extend Airflow image.\r\n    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- apache-airflow-providers-apache-kafka confluent-kafka bson fastavro pymongo}\r\n    # The following line can be used to set a custom config file, stored in the local config folder\r\n    # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file\r\n    # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'\r\n  volumes:\r\n    - ${AIRFLOW_PROJ_DIR:-.}/dags:/opt/airflow/dags\r\n    - ${AIRFLOW_PROJ_DIR:-.}/logs:/opt/airflow/logs\r\n    - ${AIRFLOW_PROJ_DIR:-.}/config:/opt/airflow/config\r\n    - ${AIRFLOW_PROJ_DIR:-.}/plugins:/opt/airflow/plugins\r\n  user: \"${AIRFLOW_UID:-50000}:0\"\r\n  depends_on:\r\n    &airflow-common-depends-on\r\n    redis:\r\n      condition: service_healthy\r\n    postgres:\r\n      condition: service_healthy\r\n\r\nservices:\r\n  postgres:\r\n    image: postgres:13\r\n    environment:\r\n      POSTGRES_USER: airflow\r\n      POSTGRES_PASSWORD: airflow\r\n      POSTGRES_DB: airflow\r\n    volumes:\r\n      - postgres-db-volume:/var/lib/postgresql/data\r\n    healthcheck:\r\n      test: [\"CMD\", \"pg_isready\", \"-U\", \"airflow\"]\r\n      interval: 10s\r\n      retries: 5\r\n      start_period: 5s\r\n    restart: always\r\n\r\n  redis:\r\n    # Redis is limited to 7.2-bookworm due to licencing change\r\n    # https://redis.io/blog/redis-adopts-dual-source-available-licensing/\r\n    image: redis:7.2-bookworm\r\n    expose:\r\n      - 6379\r\n    healthcheck:\r\n      test: [\"CMD\", \"redis-cli\", \"ping\"]\r\n      interval: 10s\r\n      timeout: 30s\r\n      retries: 50\r\n      start_period: 30s\r\n    restart: always\r\n\r\n  airflow-webserver:\r\n    <<: *airflow-common\r\n    command: webserver\r\n\r\n    ports:\r\n      - \"8080:8080\"\r\n    healthcheck:\r\n      test: [\"CMD\", \"curl\", \"--fail\", \"http://localhost:8080/health\"]\r\n      interval: 30s\r\n      timeout: 10s\r\n      retries: 5\r\n      start_period: 30s\r\n    restart: always\r\n    depends_on:\r\n      <<: *airflow-common-depends-on\r\n\r\n      airflow-init:\r\n        condition: service_completed_successfully\r\n\r\n  airflow-scheduler:\r\n    <<: *airflow-common\r\n    command: scheduler\r\n    healthcheck:\r\n      test: [\"CMD\", \"curl\", \"--fail\", \"http://localhost:8974/health\"]\r\n      interval: 30s\r\n      timeout: 10s\r\n      retries: 5\r\n      start_period: 30s\r\n    restart: always\r\n    depends_on:\r\n      <<: *airflow-common-depends-on\r\n      airflow-init:\r\n        condition: service_completed_successfully\r\n\r\n  airflow-worker:\r\n    <<: *airflow-common\r\n    command: celery worker\r\n    healthcheck:\r\n      # yamllint disable rule:line-length\r\n      test:\r\n        - \"CMD-SHELL\"\r\n        - 'celery --app airflow.providers.celery.executors.celery_executor.app inspect ping -d \"celery@$${HOSTNAME}\" || celery --app airflow.executors.celery_executor.app inspect ping -d \"celery@$${HOSTNAME}\"'\r\n      interval: 30s\r\n      timeout: 10s\r\n      retries: 5\r\n      start_period: 30s\r\n    environment:\r\n      <<: *airflow-common-env\r\n      # Required to handle warm shutdown of the celery workers properly\r\n      # See https://airflow.apache.org/docs/docker-stack/entrypoint.html#signal-propagation\r\n      DUMB_INIT_SETSID: \"0\"\r\n    restart: always\r\n    depends_on:\r\n      <<: *airflow-common-depends-on\r\n      airflow-init:\r\n        condition: service_completed_successfully\r\n\r\n  airflow-triggerer:\r\n    <<: *airflow-common\r\n    command: triggerer\r\n    healthcheck:\r\n      test: [\"CMD-SHELL\", 'airflow jobs check --job-type TriggererJob --hostname \"$${HOSTNAME}\"']\r\n      interval: 30s\r\n      timeout: 10s\r\n      retries: 5\r\n      start_period: 30s\r\n    restart: always\r\n    depends_on:\r\n      <<: *airflow-common-depends-on\r\n      airflow-init:\r\n        condition: service_completed_successfully\r\n\r\n  airflow-init:\r\n    <<: *airflow-common\r\n    entrypoint: /bin/bash\r\n    # yamllint disable rule:line-length\r\n    command:\r\n      - -c\r\n      - |\r\n        if [[ -z \"${AIRFLOW_UID}\" ]]; then\r\n          echo\r\n          echo -e \"\\033[1;33mWARNING!!!: AIRFLOW_UID not set!\\e[0m\"\r\n          echo \"If you are on Linux, you SHOULD follow the instructions below to set \"\r\n          echo \"AIRFLOW_UID environment variable, otherwise files will be owned by root.\"\r\n          echo \"For other operating systems you can get rid of the warning with manually created .env file:\"\r\n          echo \"    See: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#setting-the-right-airflow-user\"\r\n          echo\r\n        fi\r\n        one_meg=1048576\r\n        mem_available=$$(($$(getconf _PHYS_PAGES) * $$(getconf PAGE_SIZE) / one_meg))\r\n        cpus_available=$$(grep -cE 'cpu[0-9]+' /proc/stat)\r\n        disk_available=$$(df / | tail -1 | awk '{print $$4}')\r\n        warning_resources=\"false\"\r\n        if (( mem_available < 4000 )) ; then\r\n          echo\r\n          echo -e \"\\033[1;33mWARNING!!!: Not enough memory available for Docker.\\e[0m\"\r\n          echo \"At least 4GB of memory required. You have $$(numfmt --to iec $$((mem_available * one_meg)))\"\r\n          echo\r\n          warning_resources=\"true\"\r\n        fi\r\n        if (( cpus_available < 2 )); then\r\n          echo\r\n          echo -e \"\\033[1;33mWARNING!!!: Not enough CPUS available for Docker.\\e[0m\"\r\n          echo \"At least 2 CPUs recommended. You have $${cpus_available}\"\r\n          echo\r\n          warning_resources=\"true\"\r\n        fi\r\n        if (( disk_available < one_meg * 10 )); then\r\n          echo\r\n          echo -e \"\\033[1;33mWARNING!!!: Not enough Disk space available for Docker.\\e[0m\"\r\n          echo \"At least 10 GBs recommended. You have $$(numfmt --to iec $$((disk_available * 1024 )))\"\r\n          echo\r\n          warning_resources=\"true\"\r\n        fi\r\n        if [[ $${warning_resources} == \"true\" ]]; then\r\n          echo\r\n          echo -e \"\\033[1;33mWARNING!!!: You have not enough resources to run Airflow (see above)!\\e[0m\"\r\n          echo \"Please follow the instructions to increase amount of resources available:\"\r\n          echo \"   https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#before-you-begin\"\r\n          echo\r\n        fi\r\n        mkdir -p /sources/logs /sources/dags /sources/plugins\r\n        chown -R \"${AIRFLOW_UID}:0\" /sources/{logs,dags,plugins}\r\n        exec /entrypoint airflow version\r\n    # yamllint enable rule:line-length\r\n    environment:\r\n      <<: *airflow-common-env\r\n      _AIRFLOW_DB_MIGRATE: 'true'\r\n      _AIRFLOW_WWW_USER_CREATE: 'true'\r\n      _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}\r\n      _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}\r\n      _PIP_ADDITIONAL_REQUIREMENTS: ''\r\n    user: \"0:0\"\r\n    volumes:\r\n      - ${AIRFLOW_PROJ_DIR:-.}:/sources\r\n\r\n  airflow-cli:\r\n    <<: *airflow-common\r\n    profiles:\r\n      - debug\r\n    environment:\r\n      <<: *airflow-common-env\r\n      CONNECTION_CHECK_MAX_COUNT: \"0\"\r\n    # Workaround for entrypoint issue. See: https://github.com/apache/airflow/issues/16252\r\n    command:\r\n      - bash\r\n      - -c\r\n      - airflow\r\n\r\n  # You can enable flower by adding \"--profile flower\" option e.g. docker-compose --profile flower up\r\n  # or by explicitly targeted on the command line e.g. docker-compose up flower.\r\n  # See: https://docs.docker.com/compose/profiles/\r\n  flower:\r\n    <<: *airflow-common\r\n    command: celery flower\r\n    profiles:\r\n      - flower\r\n    ports:\r\n      - \"5555:5555\"\r\n    healthcheck:\r\n      test: [\"CMD\", \"curl\", \"--fail\", \"http://localhost:5555/\"]\r\n      interval: 30s\r\n      timeout: 10s\r\n      retries: 5\r\n      start_period: 30s\r\n    restart: always\r\n    depends_on:\r\n      <<: *airflow-common-depends-on\r\n      airflow-init:\r\n        condition: service_completed_successfully\r\n\r\nvolumes:\r\n  postgres-db-volume:\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/docker-compose-airflow2.yml b/docker-compose-airflow2.yml
+--- a/docker-compose-airflow2.yml	
++++ b/docker-compose-airflow2.yml	
+@@ -69,7 +69,7 @@
+     AIRFLOW__SCHEDULER__ENABLE_HEALTH_CHECK: 'true'
+     # WARNING: Use _PIP_ADDITIONAL_REQUIREMENTS option ONLY for a quick checks
+     # for other purpose (development, test and especially production usage) build/extend Airflow image.
+-    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- apache-airflow-providers-apache-kafka confluent-kafka bson fastavro pymongo}
++    _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- apache-airflow-providers-apache-kafka confluent-kafka fastavro pymongo}
+     # The following line can be used to set a custom config file, stored in the local config folder
+     # If you want to use it, outcomment it and replace airflow.cfg with the name of your config file
+     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
+Index: V1__reciept_key.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/V1__reciept_key.json b/V1__reciept_key.json
+new file mode 100644
+--- /dev/null	
++++ b/V1__reciept_key.json	
+@@ -0,0 +1,15 @@
++{
++  "type": "record",
++  "name": "ReceiptKey",
++  "namespace": "data.example.Receipt",
++  "fields": [
++    {"name": "collection", "type": "string"},
++    {"name": "pos", "type": "int"},
++    {
++      "name": "timestamp",
++      "type": "long",
++      "logicalType": "timestamp-millis"
++    },
++    {"name": "_id", "type": "string"}
++  ]
++}
+\ No newline at end of file

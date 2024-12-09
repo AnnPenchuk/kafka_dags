@@ -1,0 +1,100 @@
+[2024-12-06T12:24:38.854+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-06T12:24:38.875+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag2.consume_from_kafka manual__2024-12-06T12:24:37.367178+00:00 [queued]>
+[2024-12-06T12:24:38.887+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag2.consume_from_kafka manual__2024-12-06T12:24:37.367178+00:00 [queued]>
+[2024-12-06T12:24:38.889+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-06T12:24:38.908+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): consume_from_kafka> on 2024-12-06 12:24:37.367178+00:00
+[2024-12-06T12:24:38.915+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=355) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-06T12:24:38.918+0000] {standard_task_runner.py:72} INFO - Started process 356 to run task
+[2024-12-06T12:24:38.919+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag2', 'consume_from_kafka', 'manual__2024-12-06T12:24:37.367178+00:00', '--job-id', '441', '--raw', '--subdir', 'DAGS_FOLDER/dag2_Kafkas3.py', '--cfg-path', '/tmp/tmp97zgh_nw']
+[2024-12-06T12:24:38.922+0000] {standard_task_runner.py:105} INFO - Job 441: Subtask consume_from_kafka
+[2024-12-06T12:24:38.979+0000] {task_command.py:467} INFO - Running <TaskInstance: dag2.consume_from_kafka manual__2024-12-06T12:24:37.367178+00:00 [running]> on host bc436253e42c
+[2024-12-06T12:24:39.090+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag2' AIRFLOW_CTX_TASK_ID='consume_from_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-06T12:24:37.367178+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-06T12:24:37.367178+00:00'
+[2024-12-06T12:24:39.092+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-06T12:24:42.180+0000] {logging_mixin.py:190} INFO - Received message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-06T12:24:42.213+0000] {logging_mixin.py:190} INFO - Deserialized Value: {'_id': {'oid': '674ba76b7998660b679ae1bc'}, 'travel': 3, 'payer': 2, 'amount': 26092, 'code_departure': 'SIN', 'code_arrival': 'ICN', 'number_of_passengers': 4, 'passengers': [{'name': 'Vitomir Moskalci', 'birth_date': '1998-09-29'}, {'name': 'Ángel Jiménez', 'birth_date': '1964-04-06'}, {'name': 'Ann Martin', 'birth_date': '1959-12-16'}, {'name': 'Sanni Koivisto', 'birth_date': '1988-01-27'}], 'created': {'date': '2024-12-01T00:00:24.319Z'}}
+[2024-12-06T12:24:42.214+0000] {logging_mixin.py:190} INFO - Deserialized Key: {'collection': 'reciept', 'pos': 1, 'timestamp': 1733479495, '_id': '674ba76b7998660b679ae1bc'}
+[2024-12-06T12:24:42.215+0000] {logging_mixin.py:190} INFO - Received message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-06T12:24:42.215+0000] {logging_mixin.py:190} INFO - Deserialized Value: {'_id': {'oid': '674ba76b7998660b679ae1bb'}, 'travel': 38, 'payer': 1, 'amount': 79596, 'code_departure': 'DXB', 'code_arrival': 'FRA', 'number_of_passengers': 4, 'passengers': [{'name': 'Zoe Barnaby', 'birth_date': '1993-09-24'}, {'name': 'Angelika Brecht', 'birth_date': '1971-06-19'}, {'name': 'Rodrigo Fuentes', 'birth_date': '1976-02-06'}, {'name': 'Ofélia Pereira', 'birth_date': '1966-04-17'}], 'created': {'date': '2024-12-01T00:00:20.187Z'}}
+[2024-12-06T12:24:42.216+0000] {logging_mixin.py:190} INFO - Deserialized Key: {'collection': 'reciept', 'pos': 0, 'timestamp': 1733479491, '_id': '674ba76b7998660b679ae1bb'}
+[2024-12-06T12:24:42.216+0000] {logging_mixin.py:190} INFO - Received message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-06T12:24:42.217+0000] {logging_mixin.py:190} INFO - Deserialized Value: {'_id': {'oid': '674ba76b7998660b679ae1bd'}, 'travel': 2, 'payer': 3, 'amount': 49345, 'code_departure': 'BOM', 'code_arrival': 'LAX', 'number_of_passengers': 5, 'passengers': [{'name': 'Jayden Slawa', 'birth_date': '1962-09-16'}, {'name': 'Gabriele Rogstad', 'birth_date': '1971-07-01'}, {'name': 'Lars Owren', 'birth_date': '1970-06-10'}, {'name': 'Mason Rose', 'birth_date': '1996-07-08'}, {'name': 'Veer Patil', 'birth_date': '1972-11-19'}], 'created': {'date': '2024-12-01T00:01:46.804Z'}}
+[2024-12-06T12:24:42.217+0000] {logging_mixin.py:190} INFO - Deserialized Key: {'collection': 'reciept', 'pos': 2, 'timestamp': 1733479498, '_id': '674ba76b7998660b679ae1bd'}
+[2024-12-06T12:24:42.218+0000] {logging_mixin.py:190} INFO - Received message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-06T12:24:42.218+0000] {logging_mixin.py:190} INFO - Deserialized Value: {'_id': {'oid': '674ba76b7998660b679ae1be'}, 'travel': 4, 'payer': 4, 'amount': 14544, 'code_departure': 'SYD', 'code_arrival': 'LIS', 'number_of_passengers': 2, 'passengers': [{'name': 'Carla Jiménez', 'birth_date': '1982-03-11'}, {'name': 'Miguel Iglesias', 'birth_date': '1978-05-20'}], 'created': {'date': '2024-12-01T00:01:47.621Z'}}
+[2024-12-06T12:24:42.219+0000] {logging_mixin.py:190} INFO - Deserialized Key: {'collection': 'reciept', 'pos': 3, 'timestamp': 1733479502, '_id': '674ba76b7998660b679ae1be'}
+[2024-12-06T12:24:42.219+0000] {logging_mixin.py:190} INFO - Received message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-06T12:24:42.220+0000] {logging_mixin.py:190} INFO - Deserialized Value: {'_id': {'oid': '674cf8cf084132647fe0c8fc'}, 'travel': 38, 'payer': 1, 'amount': 99495, 'code_departure': 'DXB', 'code_arrival': 'FRA', 'number_of_passengers': 5, 'passengers': [{'name': 'Zoe Barnaby', 'birth_date': '1993-09-24'}, {'name': 'Horoshko Chizhevskiy', 'birth_date': '1947-06-22'}, {'name': 'Hazel Roberts', 'birth_date': '1973-11-11'}, {'name': 'Graciela Véliz', 'birth_date': '1976-02-09'}, {'name': 'Vist Ponomarov', 'birth_date': '1950-06-13'}], 'created': {'date': '2024-12-02T00:01:15.729Z'}}
+[2024-12-06T12:24:42.220+0000] {logging_mixin.py:190} INFO - Deserialized Key: {'collection': 'reciept', 'pos': 4, 'timestamp': 1733479512, '_id': '674cf8cf084132647fe0c8fc'}
+[2024-12-06T12:24:47.221+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:24:52.222+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:24:57.224+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:02.225+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:07.228+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:12.229+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:17.230+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:22.233+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:27.236+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:32.239+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:37.242+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:42.243+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:47.246+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:52.248+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:25:57.250+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:02.252+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:07.255+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:12.257+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:17.259+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:22.260+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:27.261+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:32.263+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:37.265+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:42.266+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:47.267+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:52.270+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:26:57.271+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:02.274+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:07.276+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:12.278+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:17.279+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:22.282+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:27.284+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:32.285+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:37.286+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:42.287+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:47.288+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:52.289+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:27:57.290+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:02.291+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:07.292+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:12.294+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:17.296+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:22.299+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:27.302+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:32.305+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:37.306+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:42.309+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:47.310+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:52.313+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:28:57.317+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:02.319+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:07.320+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:12.321+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:17.323+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:22.325+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:27.328+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:32.330+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:37.332+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:42.334+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:47.337+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:52.338+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:29:57.340+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:30:02.342+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-06T12:30:06.948+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2024-12-06T12:30:06.949+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-06T12:30:06.951+0000] {process_utils.py:132} INFO - Sending 15 to group 356. PIDs of all processes in the group: [356]
+[2024-12-06T12:30:06.951+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 356
+[2024-12-06T12:30:07.345+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-06T12:30:07.369+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-06T12:30:07.409+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=356, status='terminated', exitcode=0, started='12:24:38') (356) terminated with exit code 0

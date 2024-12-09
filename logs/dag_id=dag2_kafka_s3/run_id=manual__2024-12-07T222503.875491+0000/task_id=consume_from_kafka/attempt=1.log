@@ -1,0 +1,1101 @@
+[2024-12-07T22:25:08.828+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-07T22:25:08.851+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag2_kafka_s3.consume_from_kafka manual__2024-12-07T22:25:03.875491+00:00 [queued]>
+[2024-12-07T22:25:08.866+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag2_kafka_s3.consume_from_kafka manual__2024-12-07T22:25:03.875491+00:00 [queued]>
+[2024-12-07T22:25:08.868+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-07T22:25:08.887+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): consume_from_kafka> on 2024-12-07 22:25:03.875491+00:00
+[2024-12-07T22:25:08.894+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2052) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-07T22:25:08.896+0000] {standard_task_runner.py:72} INFO - Started process 2054 to run task
+[2024-12-07T22:25:08.897+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag2_kafka_s3', 'consume_from_kafka', 'manual__2024-12-07T22:25:03.875491+00:00', '--job-id', '627', '--raw', '--subdir', 'DAGS_FOLDER/dag2_kafka_s3.py', '--cfg-path', '/tmp/tmp49_jeu1f']
+[2024-12-07T22:25:08.900+0000] {standard_task_runner.py:105} INFO - Job 627: Subtask consume_from_kafka
+[2024-12-07T22:25:08.957+0000] {task_command.py:467} INFO - Running <TaskInstance: dag2_kafka_s3.consume_from_kafka manual__2024-12-07T22:25:03.875491+00:00 [running]> on host d7d86e3077c3
+[2024-12-07T22:25:09.072+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag2_kafka_s3' AIRFLOW_CTX_TASK_ID='consume_from_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-07T22:25:03.875491+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-07T22:25:03.875491+00:00'
+[2024-12-07T22:25:09.074+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-07T22:25:14.306+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:14.307+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-07T22:25:14.308+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:14.309+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-07T22:25:15.416+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222514.avro
+[2024-12-07T22:25:15.417+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:15.418+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-07T22:25:15.419+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:15.419+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-07T22:25:16.295+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222515.avro
+[2024-12-07T22:25:16.296+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:16.297+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-07T22:25:16.298+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:16.299+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-07T22:25:17.156+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222516.avro
+[2024-12-07T22:25:17.158+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:17.160+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-07T22:25:17.162+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:17.164+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-07T22:25:18.076+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222517.avro
+[2024-12-07T22:25:18.078+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:18.079+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-07T22:25:18.080+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:18.080+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-07T22:25:18.967+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222518.avro
+[2024-12-07T22:25:18.968+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:18.969+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-07T22:25:18.969+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:18.970+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-07T22:25:19.828+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222518.avro
+[2024-12-07T22:25:19.829+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:19.830+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:19.831+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:19.832+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:20.722+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222519.avro
+[2024-12-07T22:25:20.724+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:20.726+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-07T22:25:20.727+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:20.729+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-07T22:25:21.656+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222520.avro
+[2024-12-07T22:25:21.658+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:21.659+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-07T22:25:21.660+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:21.662+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-07T22:25:22.550+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222521.avro
+[2024-12-07T22:25:22.554+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:22.557+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-07T22:25:22.560+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:22.563+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-07T22:25:23.459+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222522.avro
+[2024-12-07T22:25:23.463+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:23.466+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-07T22:25:23.468+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:23.470+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-07T22:25:24.724+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222523.avro
+[2024-12-07T22:25:24.726+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:24.727+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-07T22:25:24.728+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:24.728+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-07T22:25:25.602+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222524.avro
+[2024-12-07T22:25:25.606+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:25.608+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-07T22:25:25.611+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:25.614+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-07T22:25:26.498+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222525.avro
+[2024-12-07T22:25:26.499+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:26.500+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-07T22:25:26.501+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:26.501+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-07T22:25:27.386+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222526.avro
+[2024-12-07T22:25:27.387+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:27.388+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-07T22:25:27.388+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:27.389+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-07T22:25:28.783+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222527.avro
+[2024-12-07T22:25:28.784+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:28.786+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-07T22:25:28.787+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:28.788+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-07T22:25:29.705+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222528.avro
+[2024-12-07T22:25:29.708+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:29.711+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-07T22:25:29.712+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:29.714+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-07T22:25:30.622+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222529.avro
+[2024-12-07T22:25:30.626+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:30.629+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-07T22:25:30.632+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:30.633+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-07T22:25:31.559+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222530.avro
+[2024-12-07T22:25:31.563+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:31.566+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-07T22:25:31.568+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:31.570+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-07T22:25:32.433+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222531.avro
+[2024-12-07T22:25:32.435+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:32.436+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-07T22:25:32.437+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:32.437+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-07T22:25:33.333+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222532.avro
+[2024-12-07T22:25:33.337+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:33.339+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-07T22:25:33.342+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:33.345+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-07T22:25:34.222+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222533.avro
+[2024-12-07T22:25:34.225+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:34.228+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:25:34.230+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:34.232+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:25:35.114+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222534.avro
+[2024-12-07T22:25:35.116+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:35.117+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-07T22:25:35.117+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:35.118+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-07T22:25:35.972+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222535.avro
+[2024-12-07T22:25:35.975+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:35.977+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-07T22:25:35.979+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:35.980+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-07T22:25:36.989+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222535.avro
+[2024-12-07T22:25:36.990+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:36.991+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-07T22:25:36.991+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:36.992+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-07T22:25:37.862+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222537.avro
+[2024-12-07T22:25:37.863+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:37.864+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-07T22:25:37.865+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:37.866+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-07T22:25:38.719+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222537.avro
+[2024-12-07T22:25:38.720+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:38.721+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-07T22:25:38.722+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:38.723+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea170\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1eDiedrich Faller\x141956-02-01\x1cSara Mortensen\x141988-03-22 Federico Collazo\x141985-03-25\x0002024-12-07T00:03:25.837Z'
+[2024-12-07T22:25:39.571+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222538.avro
+[2024-12-07T22:25:39.572+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:39.573+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-07T22:25:39.574+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:39.574+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-07T22:25:40.414+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222539.avro
+[2024-12-07T22:25:40.415+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:40.416+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-07T22:25:40.417+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:40.417+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-07T22:25:41.323+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222540.avro
+[2024-12-07T22:25:41.324+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:41.325+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-07T22:25:41.326+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:41.326+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-07T22:25:42.200+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222541.avro
+[2024-12-07T22:25:42.201+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:42.202+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:25:42.203+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:42.204+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:25:43.584+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222542.avro
+[2024-12-07T22:25:43.586+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:43.588+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:25:43.589+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:43.590+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:25:44.455+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222543.avro
+[2024-12-07T22:25:44.457+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:44.458+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-07T22:25:44.458+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:44.459+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-07T22:25:45.474+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222544.avro
+[2024-12-07T22:25:45.476+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:45.477+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-07T22:25:45.477+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:45.478+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-07T22:25:46.333+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222545.avro
+[2024-12-07T22:25:46.335+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:46.337+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-07T22:25:46.337+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:46.338+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-07T22:25:47.258+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222546.avro
+[2024-12-07T22:25:47.260+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:47.261+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-07T22:25:47.262+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:47.263+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-07T22:25:48.147+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222547.avro
+[2024-12-07T22:25:48.150+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:48.151+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-07T22:25:48.152+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:48.153+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-07T22:25:49.036+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222548.avro
+[2024-12-07T22:25:49.039+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:49.040+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:49.041+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:49.042+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:49.906+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222549.avro
+[2024-12-07T22:25:49.907+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:49.908+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-07T22:25:49.908+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:49.909+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-07T22:25:50.791+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222549.avro
+[2024-12-07T22:25:50.792+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:50.793+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-07T22:25:50.794+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:50.795+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-07T22:25:51.655+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222550.avro
+[2024-12-07T22:25:51.659+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:51.661+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-07T22:25:51.663+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:51.666+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bd\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16 Gabriele Rogstad\x141971-07-01\x14Lars Owren\x141970-06-10\x14Mason Rose\x141996-07-08\x14Veer Patil\x141972-11-19\x0002024-12-01T00:01:46.804Z'
+[2024-12-07T22:25:52.557+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222551.avro
+[2024-12-07T22:25:52.561+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:52.564+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-07T22:25:52.566+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:52.568+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6524\x06\x04\xe2\xb1\x02\x06SIN\x06ICN\x06\x06 Vitomir Moskalci\x141998-09-29\x16Por Godunok\x141954-01-23\x1eAlma Kristensen\x141951-11-04\x0002024-12-03T00:00:21.921Z'
+[2024-12-07T22:25:53.434+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222552.avro
+[2024-12-07T22:25:53.436+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:53.437+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-07T22:25:53.437+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:53.438+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-07T22:25:54.398+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222553.avro
+[2024-12-07T22:25:54.399+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:54.399+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-07T22:25:54.400+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:54.400+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-07T22:25:55.290+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222554.avro
+[2024-12-07T22:25:55.291+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:55.292+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-07T22:25:55.293+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:55.293+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f72\x06\x04\xce\xfd\x03\x06SIN\x06ICN\n\n Vitomir Moskalci\x141998-09-29\x1cEevi Koistinen\x141973-02-22\x1cTeodora Tasi\xc4\x87\x141953-06-14\x1cRolando Vieira\x141966-11-17\x14Laurie Roy\x141987-01-24\x0002024-12-04T00:00:30.330Z'
+[2024-12-07T22:25:56.574+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222555.avro
+[2024-12-07T22:25:56.576+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:56.578+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-07T22:25:56.580+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:56.581+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-07T22:25:57.434+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222556.avro
+[2024-12-07T22:25:57.437+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:57.440+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-07T22:25:57.443+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:57.445+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc64\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16\x1cL\xc3\xa1szl\xc3\xb3 Walta\x141981-08-14\x12Vega Kinn\x142000-12-19\x1cGunter Pfennig\x141977-12-22\x1cSophia Laurent\x141984-06-10\x0002024-12-05T00:00:40.309Z'
+[2024-12-07T22:25:58.827+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222557.avro
+[2024-12-07T22:25:58.830+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:58.831+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:58.831+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:58.832+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:59.715+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222558.avro
+[2024-12-07T22:25:59.717+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:25:59.719+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:25:59.719+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:25:59.721+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49e\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:26:00.576+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222559.avro
+[2024-12-07T22:26:00.578+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:00.581+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-07T22:26:00.584+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:00.586+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea171\x04\x06\x82\x83\x06\x06BOM\x06LAX\n\n\x18Jayden Slawa\x141962-09-16&Orimira Vilchinskiy\x141977-02-05&Kuzey D\xc3\xbc\xc5\x9fenkalkar\x141956-01-05 No\xc3\xablle Fournier\x141993-01-23\x1ePeer Schiffmann\x141989-04-18\x0002024-12-07T00:03:29.095Z'
+[2024-12-07T22:26:01.503+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222600.avro
+[2024-12-07T22:26:01.505+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:01.506+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-07T22:26:01.507+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:01.508+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-07T22:26:02.397+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222601.avro
+[2024-12-07T22:26:02.399+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:02.400+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:26:02.400+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:02.401+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:26:03.252+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222602.avro
+[2024-12-07T22:26:03.254+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:03.254+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-07T22:26:03.255+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:03.256+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6526\x08\x08\xc0\xc6\x03\x06SYD\x06LIS\x08\x08\x1cCarla Jim\xc3\xa9nez\x141982-03-11 Esperanza Mar\xc3\xadn\x141945-01-30\x1cRamiro Mireles\x142000-09-03\x1aLeonel Rol\xc3\xb3n\x141972-01-13\x0002024-12-03T00:00:27.862Z'
+[2024-12-07T22:26:04.097+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222603.avro
+[2024-12-07T22:26:04.098+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:04.099+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-07T22:26:04.101+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:04.102+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f71L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x14Ruth Denis\x141965-08-19\x1aBecky Hawkins\x141953-09-27\x1aMarcus Leroux\x141950-04-30\x0002024-12-04T00:00:26.642Z'
+[2024-12-07T22:26:05.173+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222604.avro
+[2024-12-07T22:26:05.174+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:05.175+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-07T22:26:05.176+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:05.176+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc62L\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-05T00:00:13.551Z'
+[2024-12-07T22:26:06.050+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222605.avro
+[2024-12-07T22:26:06.053+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:06.054+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:26:06.056+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:06.057+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:26:06.937+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222606.avro
+[2024-12-07T22:26:06.938+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:06.939+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-07T22:26:06.940+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:06.941+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bbL\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x1eAngelika Brecht\x141971-06-19\x1eRodrigo Fuentes\x141976-02-06\x1eOf\xc3\xa9lia Pereira\x141966-04-17\x0002024-12-01T00:00:20.187Z'
+[2024-12-07T22:26:07.809+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222606.avro
+[2024-12-07T22:26:07.811+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:07.812+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-07T22:26:07.813+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:07.814+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-07T22:26:08.746+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222607.avro
+[2024-12-07T22:26:08.748+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:08.750+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-07T22:26:08.751+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:08.752+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fe\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x12Sam White\x141950-07-18\x0002024-12-02T00:01:16.572Z'
+[2024-12-07T22:26:09.665+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222608.avro
+[2024-12-07T22:26:09.667+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:09.668+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-07T22:26:09.668+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:09.669+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-07T22:26:10.537+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222609.avro
+[2024-12-07T22:26:10.538+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:10.539+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:26:10.540+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:10.540+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b067523f0c579d83f10892c49dL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24\x1e\xd8\xb1\xd9\x87\xd8\xa7 \xda\xa9\xd9\x88\xd8\xaa\xdb\x8c\x141953-05-29\x1eKristin Steward\x141974-01-29\x18Summer Patel\x141961-11-07\x18Ryan Stenvik\x141959-07-04\x0002024-12-06T00:02:20.255Z'
+[2024-12-07T22:26:11.408+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222610.avro
+[2024-12-07T22:26:11.409+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:11.410+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-07T22:26:11.411+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:11.412+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-07T22:26:12.301+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222611.avro
+[2024-12-07T22:26:12.302+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:12.304+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-07T22:26:12.305+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:12.305+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-07T22:26:13.179+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222612.avro
+[2024-12-07T22:26:13.180+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:13.181+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-07T22:26:13.182+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:13.183+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1bc\x06\x04\xd8\x97\x03\x06SIN\x06ICN\x08\x08 Vitomir Moskalci\x141998-09-29\x1e\xc3\x81ngel Jim\xc3\xa9nez\x141964-04-06\x14Ann Martin\x141959-12-16\x1cSanni Koivisto\x141988-01-27\x0002024-12-01T00:00:24.319Z'
+[2024-12-07T22:26:15.081+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222613.avro
+[2024-12-07T22:26:15.083+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:15.084+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-07T22:26:15.085+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:15.085+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674ba76b7998660b679ae1be\x08\x08\xa0\xe3\x01\x06SYD\x06LIS\x04\x04\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x1eMiguel Iglesias\x141978-05-20\x0002024-12-01T00:01:47.621Z'
+[2024-12-07T22:26:15.953+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222615.avro
+[2024-12-07T22:26:15.955+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:15.956+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:26:15.957+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:15.958+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fcL\x02\xce\x92\x0c\x06DXB\x06FRA\n\n\x16Zoe Barnaby\x141993-09-24(Horoshko Chizhevskiy\x141947-06-22\x1aHazel Roberts\x141973-11-11\x1eGraciela V\xc3\xa9liz\x141976-02-09\x1cVist Ponomarov\x141950-06-13\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:26:16.846+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222615.avro
+[2024-12-07T22:26:16.849+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:16.851+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:26:16.852+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:16.854+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8fd\x06\x04\xf6e\x06SIN\x06ICN\x02\x02 Vitomir Moskalci\x141998-09-29\x0002024-12-02T00:01:15.729Z'
+[2024-12-07T22:26:17.763+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222616.avro
+[2024-12-07T22:26:17.764+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:17.765+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-07T22:26:17.766+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:17.767+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674cf8cf084132647fe0c8ff\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11\x16Edita Mamay\x141995-07-20\x16Ruby Turner\x141964-10-08\x1aRida Volwater\x141967-02-21\x16Gautam Shah\x141974-08-29\x0002024-12-02T00:01:19.906Z'
+[2024-12-07T22:26:18.604+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222617.avro
+[2024-12-07T22:26:18.605+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:18.606+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-07T22:26:18.608+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:18.608+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6523L\x02\xec\xed\x04\x06DXB\x06FRA\x04\x04\x16Zoe Barnaby\x141993-09-24\x18Alyssa Owens\x141950-03-27\x0002024-12-03T00:00:19.602Z'
+[2024-12-07T22:26:19.473+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222618.avro
+[2024-12-07T22:26:19.475+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:19.476+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-07T22:26:19.477+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:19.477+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674e4a1bc0e97b55fe9b6525\x04\x06\xb4\xb4\x02\x06BOM\x06LAX\x04\x04\x18Jayden Slawa\x141962-09-16\x1eAnnerie G\xc3\xbcne\xc5\x9f\x141959-05-31\x0002024-12-03T00:00:24.212Z'
+[2024-12-07T22:26:20.370+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222619.avro
+[2024-12-07T22:26:20.371+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:20.372+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-07T22:26:20.372+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:20.373+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0674f9ba0d7721aa60ab76f73\x04\x06\xce\xce\x03\x06BOM\x06LAX\x06\x06\x18Jayden Slawa\x141962-09-16(Dulcin\xc3\xa9ia Rodrigues\x141997-08-24\x1eMargarita Petit\x141972-10-07\x0002024-12-04T00:00:32.120Z'
+[2024-12-07T22:26:21.234+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222620.avro
+[2024-12-07T22:26:21.235+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:21.236+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-07T22:26:21.237+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:21.237+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06750ed28508703540960fc63\x06\x04\xec\xcb\x01\x06SIN\x06ICN\x04\x04 Vitomir Moskalci\x141998-09-29\x16Ayla Walker\x141947-06-26\x0002024-12-05T00:00:14.076Z'
+[2024-12-07T22:26:22.089+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222621.avro
+[2024-12-07T22:26:22.090+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:22.091+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-07T22:26:22.092+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:22.093+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b06752e5b2a92f47e38e6bcfb9L\x02\xd8\xdb\t\x06DXB\x06FRA\x08\x08\x16Zoe Barnaby\x141993-09-24\x16Noelle Aden\x141990-02-03\x1aBojan Gautier\x141991-04-25\x1eRamon Fernandez\x141995-10-02\x0002024-12-06T11:53:22.709Z'
+[2024-12-07T22:26:22.946+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222622.avro
+[2024-12-07T22:26:22.950+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:22.952+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-07T22:26:22.954+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:22.956+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea16fL\x02\xf6\xb6\x02\x06DXB\x06FRA\x02\x02\x16Zoe Barnaby\x141993-09-24\x0002024-12-07T00:03:22.763Z'
+[2024-12-07T22:26:23.904+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222622.avro
+[2024-12-07T22:26:23.906+0000] {logging_mixin.py:190} INFO - <class 'cimpl.Message'>
+[2024-12-07T22:26:23.907+0000] {logging_mixin.py:190} INFO - Avro message: b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-07T22:26:23.907+0000] {logging_mixin.py:190} INFO - <class 'bytes'>
+[2024-12-07T22:26:23.908+0000] {logging_mixin.py:190} INFO - b'\x00\x00\x00\x00\x0b0675390d4882d22e1546ea172\x08\x08\x90\xb8\x04\x06SYD\x06LIS\n\n\x1cCarla Jim\xc3\xa9nez\x141982-03-11$Chaitanya Tipparti\x141945-04-07&Ratimir Mihajlovi\xc4\x87\x141986-08-02\x12Barb Neal\x141978-11-27&Hermelinda Saldivar\x141968-04-03\x0002024-12-07T00:03:32.363Z'
+[2024-12-07T22:26:24.860+0000] {logging_mixin.py:190} INFO - Uploaded file: 0_20241207222623.avro
+[2024-12-07T22:26:30.862+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:26:30.864+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:26:36.866+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:26:36.867+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:26:42.868+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:26:42.869+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:26:48.871+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:26:48.872+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:26:54.872+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:26:54.873+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:00.875+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:00.877+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:06.879+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:06.880+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:12.881+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:12.882+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:18.884+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:18.885+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:24.886+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:24.887+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:30.888+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:30.889+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:36.890+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:36.892+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:42.895+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:42.896+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:48.897+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:48.899+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:27:54.901+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:27:54.902+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:00.903+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:00.904+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:06.905+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:06.906+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:12.906+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:12.912+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:18.919+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:18.920+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:24.921+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:24.922+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:30.923+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:30.924+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:36.925+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:36.927+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:42.928+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:42.929+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:48.930+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:48.931+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:28:54.933+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:28:54.936+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:00.938+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:00.940+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:06.942+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:06.942+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:12.943+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:12.944+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:18.945+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:18.946+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:24.947+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:24.947+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:30.949+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:30.950+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:36.952+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:36.954+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:42.957+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:42.959+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:48.962+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:48.963+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:29:54.964+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:29:54.965+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:00.966+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:00.967+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:06.968+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:06.969+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:12.970+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:12.971+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:18.973+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:18.975+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:24.977+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:24.978+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:30.980+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:30.981+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:36.982+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:36.985+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:42.987+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:42.990+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:48.992+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:48.993+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:30:54.993+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:30:54.995+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:00.995+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:00.996+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:06.998+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:06.999+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:13.001+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:13.002+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:19.003+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:19.005+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:25.007+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:25.008+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:31.009+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:31.010+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:37.012+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:37.013+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:43.014+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:43.016+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:49.018+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:49.020+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:31:55.022+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:31:55.023+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:01.025+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:01.027+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:07.030+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:07.032+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:13.034+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:13.037+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:19.039+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:19.040+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:25.040+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:25.041+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:31.042+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:31.043+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:37.044+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:37.045+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:43.046+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:43.047+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:49.048+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:49.051+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:32:55.053+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:32:55.054+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:01.056+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:01.058+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:07.060+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:07.061+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:13.062+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:13.064+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:19.067+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:19.068+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:25.069+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:25.071+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:31.073+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:31.076+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:37.078+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:37.080+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:43.082+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:43.084+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:49.085+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:49.087+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:33:55.089+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:33:55.090+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:01.098+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:01.099+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:07.100+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:07.101+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:13.103+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:13.104+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:19.105+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:19.108+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:25.110+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:25.111+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:31.112+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:31.112+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:37.114+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:37.116+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:43.119+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:43.121+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:49.123+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:49.124+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:34:55.125+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:34:55.126+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:01.127+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:01.129+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:07.130+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:07.131+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:13.132+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:13.133+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:19.135+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:19.136+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:25.137+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:25.137+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:31.138+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:31.139+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:37.140+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:37.141+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:43.142+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:43.144+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:49.146+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:49.147+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:35:55.148+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:35:55.149+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:01.151+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:01.153+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:07.155+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:07.156+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:13.157+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:13.158+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:19.159+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:19.162+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:25.164+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:25.166+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:31.168+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:31.169+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:37.170+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:37.171+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:43.172+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:43.173+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:49.174+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:49.175+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:36:55.176+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:36:55.177+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:01.178+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:01.178+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:07.179+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:07.181+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:13.182+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:13.183+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:19.184+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:19.185+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:25.187+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:25.188+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:31.190+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:31.193+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:37.194+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:37.195+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:43.196+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:43.197+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:49.198+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:49.200+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:37:55.202+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:37:55.203+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:01.204+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:01.205+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:07.206+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:07.208+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:13.210+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:13.211+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:19.212+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:19.214+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:25.216+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:25.217+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:31.218+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:31.219+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:37.220+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:37.221+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:43.222+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:43.223+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:49.224+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:49.224+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:38:55.225+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:38:55.226+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:01.227+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:01.229+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:07.230+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:07.230+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:13.232+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:13.233+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:19.234+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:19.235+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:25.236+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:25.237+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:31.238+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:31.240+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:37.241+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:37.242+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:43.243+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:43.243+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:49.244+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:49.246+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:39:55.248+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:39:55.249+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:01.251+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:01.305+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:07.477+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:07.479+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:13.482+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:13.484+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:19.486+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:19.487+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:25.489+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:25.490+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:31.492+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:31.492+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:37.494+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:37.497+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:43.499+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:43.501+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:49.503+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:49.506+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:40:55.509+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:40:55.511+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:01.513+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:01.514+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:07.515+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:07.516+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:13.517+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:13.519+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:19.520+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:19.521+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:25.522+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:25.523+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:31.524+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:31.525+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:37.527+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:37.528+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:43.529+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:43.533+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:49.535+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:49.537+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:41:55.539+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:41:55.540+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:01.541+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:01.543+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:07.544+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:07.545+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:13.546+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:13.547+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:19.548+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:19.549+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:25.550+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:25.551+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:31.552+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:31.553+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:37.553+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:37.554+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:43.556+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:43.557+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:49.559+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:49.562+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:42:55.564+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:42:55.565+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:01.566+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:01.567+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:07.569+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:07.570+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:13.572+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:13.573+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:19.574+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:19.576+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:25.577+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:25.578+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:31.579+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:31.581+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:37.584+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:37.585+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:43.587+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:43.588+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:49.590+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:49.591+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:43:55.593+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:43:55.593+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:01.594+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:01.595+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:07.597+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:07.599+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:13.601+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:13.603+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:19.606+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:19.606+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:25.607+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:25.609+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:31.611+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:31.613+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:37.616+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:37.618+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:43.620+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:43.622+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:49.623+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:49.624+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:44:55.625+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:44:55.626+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:01.627+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:01.628+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:07.630+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:07.631+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:13.632+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:13.634+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:19.637+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:19.637+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:25.638+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:25.640+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:31.641+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:31.642+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:37.644+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:37.646+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:43.648+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:43.649+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:49.650+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:49.651+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:45:55.652+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:45:55.653+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:01.654+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:01.655+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:07.656+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:07.657+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:13.659+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:13.659+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:19.661+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:19.662+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:25.663+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:25.665+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:31.667+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:31.670+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:37.672+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:37.673+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:43.674+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:43.675+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:49.676+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:49.679+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:46:55.680+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:46:55.681+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:01.682+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:01.684+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:07.686+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:07.687+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:13.689+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:13.690+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:19.691+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:19.692+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:25.693+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:25.694+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:31.695+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:31.698+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:37.701+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:37.702+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:43.702+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:43.703+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:49.705+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:49.707+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:47:55.709+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:47:55.710+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:01.711+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:01.712+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:07.713+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:07.713+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:13.715+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:13.716+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:19.717+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:19.717+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:25.718+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:25.721+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:31.722+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:31.723+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:37.724+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:37.726+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:43.728+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:43.730+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:49.732+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:49.735+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:48:55.737+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:48:55.738+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:01.740+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:01.742+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:07.744+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:07.745+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:13.746+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:13.747+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:19.748+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:19.750+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:25.752+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:25.754+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:31.757+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:31.774+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:37.776+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:37.777+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:43.778+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:43.780+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:49.781+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:49.783+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:49:55.785+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:49:55.786+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:01.787+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:01.788+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:07.789+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:07.790+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:13.791+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:13.792+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:19.793+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:19.794+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:25.794+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:25.796+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:31.797+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:31.800+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:37.802+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:37.803+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:43.804+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:43.805+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:49.806+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:49.807+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:50:55.807+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:50:55.808+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:01.810+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:01.812+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:07.814+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:07.815+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:13.816+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:13.818+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:19.820+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:19.821+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:25.823+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:25.824+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:31.825+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:31.827+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:37.829+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:37.830+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:43.831+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:43.832+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:49.833+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:49.836+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:51:55.838+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:51:55.841+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:01.844+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:01.845+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:07.846+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:07.847+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:13.848+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:13.849+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:19.850+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:19.851+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:25.855+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:25.896+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:31.920+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:31.921+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:37.922+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:37.923+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:43.924+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:43.925+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:49.926+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:49.927+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:52:55.928+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:52:55.929+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:01.930+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:01.931+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:07.932+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:07.933+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:13.934+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:13.936+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:19.937+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:19.939+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:25.940+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:25.940+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:31.941+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:31.942+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:37.943+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:37.944+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:43.945+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:43.945+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:49.947+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:49.949+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:53:55.950+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:53:55.952+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:01.953+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:01.955+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:07.956+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:07.957+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:13.959+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:13.961+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:19.963+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:19.964+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:25.965+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:26.017+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:32.039+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:32.040+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:38.041+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:38.043+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:44.045+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:44.046+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:50.047+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:50.048+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:54:56.049+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:54:56.050+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:02.051+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:02.054+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:08.056+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:08.059+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:14.061+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:14.062+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:20.063+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:20.064+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:26.066+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:26.067+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:32.068+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:32.069+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:38.071+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:38.072+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:44.074+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:44.076+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:50.078+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:50.079+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:55:56.080+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:55:56.081+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:02.082+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:02.083+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:08.084+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:08.084+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:14.085+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:14.086+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:20.087+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:20.088+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:26.088+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:26.089+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:32.090+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:32.092+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:38.093+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:38.094+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:44.095+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:44.097+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:50.099+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:50.102+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:56:56.104+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:56:56.105+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:02.106+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:02.107+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:08.108+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:08.111+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:14.113+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:14.113+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:20.114+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:20.120+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:26.122+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:26.123+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:32.124+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:32.124+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:38.125+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:38.126+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:44.128+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:44.130+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:50.132+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:50.133+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:57:56.135+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:57:56.137+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:02.139+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:02.141+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:08.146+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:08.154+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:14.157+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:14.160+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:20.162+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:20.163+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:26.164+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:26.167+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:32.170+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:32.172+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:38.175+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:38.176+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:44.177+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:44.180+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:50.182+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:50.185+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:58:56.187+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:58:56.188+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:02.188+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:02.190+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:08.192+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:08.192+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:14.193+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:14.194+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:20.196+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:20.198+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:26.201+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:26.203+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:32.206+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:32.208+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:38.210+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:38.211+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:44.212+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:44.214+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:50.216+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:50.217+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T22:59:56.218+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T22:59:56.220+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:02.222+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:02.223+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:08.224+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:08.225+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:14.226+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:14.227+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:20.228+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:20.229+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:26.230+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:26.231+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:32.232+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:32.233+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:38.235+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:38.236+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:44.237+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:44.238+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:50.239+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:50.241+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:00:56.242+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:00:56.244+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:02.245+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:02.247+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:08.249+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:08.250+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:14.251+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:14.252+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:20.253+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:20.255+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:26.258+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:26.261+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:32.263+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:32.264+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:38.265+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:38.266+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:44.275+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:44.276+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:50.277+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:50.278+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:01:56.280+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:01:56.281+0000] {logging_mixin.py:190} INFO - No message received
+[2024-12-07T23:02:02.282+0000] {logging_mixin.py:190} INFO - <class 'NoneType'>
+[2024-12-07T23:02:02.283+0000] {logging_mixin.py:190} INFO - No message received
