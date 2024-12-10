@@ -1,0 +1,29 @@
+# Environments
+.env.*
+dags/.env.dev
+.venv
+
+# PyCharm
+.idea/
+
+# Python-специфичные файлы
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Airflow
+logs/
+dags/__pycache__/
+plugins/__pycache__/
+.airflow/
+
+# poetry
+poetry.lock
+.pdm.toml
+
+# Kafka
+*.log
+*.offset
+*.state
+
+# MinIO (S
