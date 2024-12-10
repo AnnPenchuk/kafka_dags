@@ -8,6 +8,7 @@ dags/.env.dev
 
 # Python-специфичные файлы
 __pycache__/
+dags/__pycache__
 *.py[cod]
 *.pyo
 
