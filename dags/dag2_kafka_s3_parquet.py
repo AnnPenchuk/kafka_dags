@@ -110,15 +110,15 @@ def to_s3(json_doc):
     data = pd.DataFrame([json_doc])
     # # Преобразовать данные в формат Parquet
     table = pa.Table.from_pandas(data)
-    # buffer = io.BytesIO()  # Создаем буфер
-    # pq.write_table(table, buffer)  # Записываем таблицу в Parquet-формате в буфер
-    # buffer.seek(0)  # Устанавливаем курсор в начало буфера
-    # n+= 1
-    # bucket_name = 'reciept-bucket'
-    # # Загрузка файла в S3
-    # parquet_file_name = f"{n}_{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
-    # client.upload_fileobj(buffer, bucket_name, f"{parquet_file_name}")
-    # print(f"Загрузка завершена: {parquet_file_name}")
+    buffer = io.BytesIO()  # Создаем буфер
+    pq.write_table(table, buffer)  # Записываем таблицу в Parquet-формате в буфер
+    buffer.seek(0)  # Устанавливаем курсор в начало буфера
+    n+= 1
+    bucket_name = 'reciept-bucket'
+    # Загрузка файла в S3
+    parquet_file_name = f"{n}_{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
+    client.upload_fileobj(buffer, bucket_name, f"{parquet_file_name}")
+    print(f"Загрузка завершена: {parquet_file_name}")
 
 
 
