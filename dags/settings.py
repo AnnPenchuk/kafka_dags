@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     schema_registry: str
     kafka: str
     group_id: str
+    group_id2: str
     topic1: str
     topic2: str
     db: str
