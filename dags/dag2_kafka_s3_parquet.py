@@ -1,4 +1,6 @@
 import io
+import json
+
 import pandas as pd
 from airflow import DAG
 from airflow.operators.python import PythonOperator
@@ -12,6 +14,7 @@ from confluent_kafka import Consumer
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.avro import AvroDeserializer
 from confluent_kafka.serialization import SerializationContext, MessageField
+from pyarrow import fs
 
 from settings import settings
 
@@ -30,7 +33,24 @@ def connect_s3():
         aws_secret_access_key=secret_key,
         endpoint_url=endpoint_url
     )
+
     return s3_client
+
+
+def  s3_fs():
+    s3_config = Variable.get("minio_s3_config", deserialize_json=True)
+    access_key = s3_config[0]
+    secret_key = s3_config[1]
+    endpoint_url = s3_config[2]
+
+
+    s3_fs = fs.S3FileSystem(
+        access_key=access_key,
+        secret_key=secret_key,
+        endpoint_override=endpoint_url,
+        region='us-east-1'
+    )
+    return s3_fs
 
 
 # Задача для подключения
@@ -45,80 +65,23 @@ def check_s3_connection():
         raise
 
 
-def to_s3_avro(message):
-    print(type(message))
-    print(message)
-    if message is None:
-        print("No messages to process")
-        return
-
-    # Настраиваем подключение к MinIO
-    client = connect_s3()
-    bucket_name = settings.bucket_name
-
-    n = 0
-    buffer = io.BytesIO(message)  # Используем байтовые данные напрямую
-
-        # Генерируем имя файла
-    file_name = f"{n}_{datetime.now().strftime('%Y%m%d%H%M%S')}.avro"
-
-    try:
-        client.upload_fileobj(buffer, bucket_name, file_name)
-        print(f"Uploaded file: {file_name}")
-        n += 1
-    except Exception as e:
-        print(f"Failed to upload file {file_name}: {e}")
-
 
 def to_s3(json_doc):
-    # json_doc = [{
-    #     '_id': '675785ffe659c3a770165c8a',
-    #     'travel': 2,
-    #     'payer': 3,
-    #     'amount': 19738,
-    #     'code_departure': 'BOM',
-    #     'code_arrival': 'LAX',
-    #     'number_of_passengers': 2,
-    #     'passengers': [
-    #         {'name': 'Jayden Slawa', 'birth_date': '1962-09-16'},
-    #         {'name': 'Beverly Alvarez', 'birth_date': '1979-05-30'}
-    #     ],
-    #     'created': '2024-12-10T00:06:23.425Z'
-    # }]
-    n = 0
-    client = connect_s3()
+    fs= s3_fs()
     print(json_doc)
-    # # Преобразование сложных типов в плоскую структуру
-    # flat_data = []
-    # for record in json_doc:
-    #     for passenger in record['passengers']:
-    #         flat_data.append({
-    #             '_id': record['_id'],
-    #             'travel': record['travel'],
-    #             'payer': record['payer'],
-    #             'amount': record['amount'],
-    #             'code_departure': record['code_departure'],
-    #             'code_arrival': record['code_arrival'],
-    #             'number_of_passengers': record['number_of_passengers'],
-    #             'passenger_name': passenger['name'],
-    #             'passenger_birth_date': passenger['birth_date'],
-    #             'created': record['created']
-    #         })
-
     # Преобразование в DataFrame
-    # json_doc["_id"] = str(json_doc["_id"])  # Конвертация _id в строку
-    data = pd.DataFrame([json_doc])
-    # # Преобразовать данные в формат Parquet
-    table = pa.Table.from_pandas(data)
-    buffer = io.BytesIO()  # Создаем буфер
-    pq.write_table(table, buffer)  # Записываем таблицу в Parquet-формате в буфер
-    buffer.seek(0)  # Устанавливаем курсор в начало буфера
-    n+= 1
-    bucket_name = 'reciept-bucket'
+    df = pd.DataFrame(json_doc)
+    df['_id'] = df['_id'].apply(lambda x: x.get('oid') if isinstance(x, dict) else x)
+    df['created'] = df['created'].apply(lambda x: x.get('date') if isinstance(x, dict) else x)
+    # Преобразование столбца 'passengers' в строку
+    df['passengers'] = df['passengers'].apply(lambda x: str(x)[1:-1])
     # Загрузка файла в S3
-    parquet_file_name = f"{n}_{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
-    client.upload_fileobj(buffer, bucket_name, f"{parquet_file_name}")
-    print(f"Загрузка завершена: {parquet_file_name}")
+    bucket_name = 'reciept-bucket'
+    file_name = f"{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
+    #file_name = f"{'reciept'}.parquet"
+    parquet_file_path = f"{bucket_name}/{file_name}"
+    df.to_parquet(f"{parquet_file_path}", engine="pyarrow", filesystem=fs)
+    print(f"Загрузка завершена: {file_name}")
 
 
 
@@ -134,31 +97,41 @@ def consume_kafka(**kwargs):
         'bootstrap.servers': settings.kafka,
         'group.id': settings.group_id,
         'auto.offset.reset': 'earliest'
-    })
+        })
     topic1=settings.topic1
     consumer.subscribe([topic1])
 
-
+    data_value = []
+    size = 0  # Текущий размер
+    batch_limit = 9  # Лимит
     while True:
             msg = consumer.poll(6.0)
-            print(type(msg))
             if msg is not None:
                  print(f"Avro message: {msg.value()}")
                  deserialized_value = avro_deserializer(msg.value(), SerializationContext(msg.topic(), MessageField.VALUE))
                  deserialized_key = avro_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
                  print("Deserialized Value:", deserialized_value)
                  print("Deserialized Key:", deserialized_key)
-                 to_s3(deserialized_value)
+
+                 if size > batch_limit:
+                     # Отправить текущую партию
+                     print(f"Отправка {size} сообщений")
+                     to_s3(data_value)  # Замените своей функцией
+                     data_value = []
+                     size = 0
+                 # Добавить сообщение в буфер
+                 data_value.append(deserialized_value)
+                 size += 1
+                 print(data_value)
                  if msg is None:
                      print('messages are over')
+                     print(size, " сообщений загружено")
+                     to_s3(data_value)
                      consumer.close()
 
             if msg is None:
                 print('No message received')
-                #deserialized_value= {'_id': {'oid': '675785ffe659c3a770165c8a'}, 'travel': 2, 'payer': 3, 'amount': 19738, 'code_departure': 'BOM', 'code_arrival': 'LAX', 'number_of_passengers': 2, 'passengers': [{'name': 'Jayden Slawa', 'birth_date': '1962-09-16'}, {'name': 'Beverly Alvarez', 'birth_date': '1979-05-30'}], 'created': {'date': '2024-12-10T00:06:23.425Z'}}
-                # to_s3(deserialized_value)
-                # break
-                continue
+            continue
 
 
 
