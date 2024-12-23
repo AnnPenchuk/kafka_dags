@@ -1,20 +1,20 @@
 import io
 import json
 
-import pandas as pd
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable
 import boto3
 import pyarrow as pa
 import pyarrow.parquet as pq
+import pyarrow.fs as fs
 import pandas as pd
 from datetime import datetime
 from confluent_kafka import Consumer
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.avro import AvroDeserializer
 from confluent_kafka.serialization import SerializationContext, MessageField
-from pyarrow import fs
+
 
 from settings import settings
 
@@ -77,11 +77,19 @@ def to_s3(json_doc):
     df['passengers'] = df['passengers'].apply(lambda x: str(x)[1:-1])
     # Загрузка файла в S3
     bucket_name = 'reciept-bucket'
-    file_name = f"{datetime.now().strftime('%Y%m%d%H%M%S')}.parquet"
-    #file_name = f"{'reciept'}.parquet"
-    parquet_file_path = f"{bucket_name}/{file_name}"
-    df.to_parquet(f"{parquet_file_path}", engine="pyarrow", filesystem=fs)
-    print(f"Загрузка завершена: {file_name}")
+    file_name = "reciept.parquet"
+    parquet_file_path =  f"{bucket_name}/{file_name}"
+
+    try:
+        pq.write_table(pa.Table.from_pandas(df), parquet_file_path, filesystem=fs)
+        print(f"Файл {file_name} успешно создан.")
+    except Exception as e:
+        print(f"Файл {file_name} уже существует {e}")
+    # Если файл существует, загружаем, объединяем данные и сохраняем
+    existing_table = pq.read_table(parquet_file_path, filesystem=fs)
+    combined_table = pa.concat_tables([existing_table, pa.Table.from_pandas(df)])
+    pq.write_table(combined_table, parquet_file_path, filesystem=fs)
+    print(f"Файл {file_name} успешно обновлен.")
 
 
 

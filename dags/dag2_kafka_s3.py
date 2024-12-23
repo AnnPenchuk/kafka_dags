@@ -8,6 +8,8 @@ from datetime import datetime
 from confluent_kafka import Consumer
 from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.avro import AvroDeserializer
+from confluent_kafka.serialization import SerializationContext, MessageField
+
 from settings import settings
 
 
@@ -85,7 +87,15 @@ def consume_kafka(**kwargs):
             msg = consumer.poll(6.0)
             print(type(msg))
             if msg is not None:
+                 avro_deserializer = AvroDeserializer(schema_registry_client)
                  print(f"Avro message: {msg.value()}")
+                 #deserialized_key = avro_deserializer(msg.key(), SerializationContext(msg.topic(), MessageField.KEY))
+                 deserialized_value = avro_deserializer(msg.value(),SerializationContext(msg.topic(), MessageField.VALUE))
+
+
+
+                 if deserialized_value is not None:
+                     print("Value{} \n".format(deserialized_value))
                  to_s3(msg.value())
                  if msg is None:
                      print('messages are over')
